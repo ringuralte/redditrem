@@ -12,7 +12,7 @@ const SignIn = () => {
     )}&redirect_uri=${
       process.env.NODE_ENV === "development"
         ? process.env.REACT_APP_DEV_REDIRECT_URI
-        : ""
+        : process.env.REACT_APP_REDIRECT_URI
     }&duration=temporary&scope=history identity save
     `);
   };
@@ -23,7 +23,7 @@ const SignIn = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-orange-600">
             RedditRem
           </h1>
-          <span className="block text-gray-800">Manage your saved content.</span>
+          <span className="block text-gray-800">View your saved content.</span>
         </div>
       </div>
       <div className="flex items-center flex-col justify-center md:mb-32">
