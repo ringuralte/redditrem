@@ -3,7 +3,7 @@ import { uuid } from "uuidv4";
 
 const SignIn = () => {
   const setUuid = () => {
-    sessionStorage.setItem("uuidState", uuid());
+    sessionStorage.setItem("uuidState", 'rand');
     window.location
       .replace(`https://www.reddit.com/api/v1/authorize?client_id=${
       process.env.REACT_APP_CLIENT_ID
