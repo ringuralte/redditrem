@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import Loading from "./Loading";
 
 const Authorize = (props) => {
+  console.log('here')
   const history = useHistory();
   const params = new URLSearchParams(props.location.search).get("state");
   const error = new URLSearchParams(props.location.search).get("error");
