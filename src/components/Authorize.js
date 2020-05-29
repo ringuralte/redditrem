@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
-import Loading from "./Loading"
+import Loading from "./Loading";
 
 const Authorize = (props) => {
   const history = useHistory();
@@ -25,7 +25,11 @@ const Authorize = (props) => {
     const authorize = async () => {
       const token = await axios.post(
         `https://www.reddit.com/api/v1/access_token`,
-        `grant_type=authorization_code&code=${code}&redirect_uri=${process.env.REACT_APP_DEV_REDIRECT_URI}`,
+        `grant_type=authorization_code&code=${code}&redirect_uri=${
+          process.env.NODE_ENV === "development"
+            ? process.env.REACT_APP_DEV_REDIRECT_URI
+            : process.env.REACT_APP_REDIRECT_URI
+        }`,
         {
           headers: {
             Authorization: `Basic ${encode}`,
@@ -45,7 +49,7 @@ const Authorize = (props) => {
     authorize();
   }
 
-  return <Loading text={"Authorizing your token..."}/>
+  return <Loading text={"Authorizing your token..."} />;
 };
 
 export default Authorize;
