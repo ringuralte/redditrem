@@ -26,7 +26,6 @@ const Home = ({
   }, [username, fetchSavedContent, fetchUser, error]);
 
   if (error) {
-    console.log(error);
     sessionStorage.clear();
     history.push("/");
   }
