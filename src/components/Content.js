@@ -16,7 +16,6 @@ const Content = ({ loadingMore, content, username, fetchMore }) => {
   const [sidebar, setSidebar] = React.useState(false);
 
   return (
-    // <div className="overflow-hidden ">
     <div>
       <div className="min-h-screen">
         <Header
@@ -30,7 +29,7 @@ const Content = ({ loadingMore, content, username, fetchMore }) => {
           setSidebar={setSidebar}
           setState={setState}
         />
-        <div className="container mx-auto px-1 py-2">
+        <div className={!sidebar ? "container mx-auto px-1 py-2" : "pointer-events-none container mx-auto px-1 py-2"}>
           <ul>
             <MainView state={state} />
           </ul>

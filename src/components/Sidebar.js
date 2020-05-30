@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import { extractSubreddits } from "../store/sidebar/sidebarActions";
 const Sidebar = (props) => {
   const node = React.useRef();
   const handleClick = (e) => {
-    // console.log(e.target)
     if (node.current.contains(e.target)) {
       return;
     }
@@ -17,21 +17,13 @@ const Sidebar = (props) => {
       document.removeEventListener("mousedown", handleClick);
     };
   }, []);
-  const reduceCounter = Object.keys(props.subreddits.children)
-    .map((key) => {
-      return props.subreddits.children[key].data.subreddit;
-    })
-    .reduce((allSubreddits, subreddit) => {
-      if (subreddit in allSubreddits) {
-        allSubreddits[subreddit]++;
-      } else {
-        allSubreddits[subreddit] = 1;
-      }
-      return allSubreddits;
-    }, {});
 
   return (
-    <div ref={node} id="sidebar" className={props.sidebar ? "sidenav w-3/4 lg:w-2/5" : "sidenavhide"}>
+    <div
+      ref={node}
+      id="sidebar"
+      className={props.sidebar ? "sidenav w-3/4 lg:w-2/5" : "sidenavhide"}
+    >
       <ul className="pt-6">
         <li className="px-6 py-2 lg:hidden">
           <button
@@ -86,27 +78,25 @@ const Sidebar = (props) => {
 
         <div className="block lg:hidden w-full h-1 bg-gray-400" />
 
-        {Object.keys(reduceCounter)
-          .sort(Intl.Collator().compare)
-          .map((key) => {
-            return (
-              <li className="px-6 py-2" key={key}>
-                <button
-                  onClick={() => {
-                    props.setState({
-                      all: false,
-                      comments: false,
-                      nsfw: false,
-                      bySub: key,
-                    });
-                    props.setSidebar(!props.sidebar);
-                  }}
-                >
-                  r/{`${key} (${reduceCounter[key]})`}
-                </button>
-              </li>
-            );
-          })}
+        {Object.keys(props.sidebarData).map((key) => {
+          return (
+            <li className="px-6 py-2" key={key}>
+              <button
+                onClick={() => {
+                  props.setState({
+                    all: false,
+                    comments: false,
+                    nsfw: false,
+                    bySub: key,
+                  });
+                  props.setSidebar(!props.sidebar);
+                }}
+              >
+                r/{`${key} ${props.sidebarData[key]}`}
+              </button>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
@@ -115,7 +105,14 @@ const Sidebar = (props) => {
 const mapStateToProps = (state) => {
   return {
     subreddits: state.savedContent.content.data,
+    sidebarData: state.sidebar,
   };
 };
 
-export default connect(mapStateToProps)(Sidebar);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    extractSubreddits: (subreddits) => dispatch(extractSubreddits(subreddits)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

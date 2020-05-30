@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchUser } from "../store/user/userActions";
 import { fetchSavedContent } from "../store/savedContents/savedContentActions";
+import { extractSubreddits } from "../store/sidebar/sidebarActions";
 
 import Loading from "./Loading";
 import Content from "./Content";
@@ -14,6 +15,8 @@ const Home = ({
   error,
   fetchUser,
   username,
+  content,
+  extractSubreddits,
 }) => {
   const history = useHistory();
 
@@ -24,6 +27,15 @@ const Home = ({
       fetchSavedContent(username);
     }
   }, [username, fetchSavedContent, fetchUser, error]);
+
+  React.useEffect(() => {
+    console.log(content.children.length)
+    if (content.children.length !== 0) {
+      extractSubreddits(content);
+    } else {
+      return undefined
+    }
+  }, [content]);
 
   if (error) {
     sessionStorage.clear();
@@ -48,6 +60,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchUser: () => dispatch(fetchUser()),
     fetchSavedContent: (user) => dispatch(fetchSavedContent(user)),
+    extractSubreddits: (subreddits) => dispatch(extractSubreddits(subreddits)),
   };
 };
 

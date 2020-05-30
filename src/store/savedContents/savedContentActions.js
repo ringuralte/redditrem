@@ -5,8 +5,9 @@ import {
   FETCH_SAVED_FAILURE,
   FETCH_MORE_REQUEST,
   FETCH_MORE_SUCCESS,
-  FETCH_MORE_FAILURE
+  FETCH_MORE_FAILURE,
 } from "./savedContentTypes";
+// import { extractSubreddits } from "../sidebar/sidebarActions";
 
 export const fetchSavedContent = (username) => {
   return (dispatch) => {
@@ -19,6 +20,7 @@ export const fetchSavedContent = (username) => {
       })
       .then((res) => {
         dispatch(fetchSavedSuccess(res.data));
+        // dispatch(extractSubreddits(res.data));
       })
       .catch((error) => {
         dispatch(fetchSavedFailure(error));
@@ -28,7 +30,7 @@ export const fetchSavedContent = (username) => {
 
 export const fetchMore = (username, after) => {
   return (dispatch) => {
-    dispatch(fetchMoreRequest())
+    dispatch(fetchMoreRequest());
     return axios
       .get(
         `https://oauth.reddit.com/user/${username}/saved?limit=100&after=${after}`,
@@ -41,6 +43,7 @@ export const fetchMore = (username, after) => {
       .then((res) => {
         // console.log(res);
         dispatch(fetchMoreSuccess(res.data));
+        // dispatch(extractSubreddits(res.data))
       })
       .catch((error) => {
         dispatch(fetchSavedFailure(error));
@@ -71,8 +74,8 @@ export const fetchSavedFailure = (error) => {
 export const fetchMoreRequest = () => {
   return {
     type: FETCH_MORE_REQUEST,
-  }
-}
+  };
+};
 
 export const fetchMoreSuccess = (content) => {
   return {
@@ -84,6 +87,6 @@ export const fetchMoreSuccess = (content) => {
 export const fetchMoreFailure = (error) => {
   return {
     type: FETCH_MORE_FAILURE,
-    payload: error
-  }
-}
+    payload: error,
+  };
+};
