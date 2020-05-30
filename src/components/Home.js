@@ -29,7 +29,6 @@ const Home = ({
   }, [username, fetchSavedContent, fetchUser, error]);
 
   React.useEffect(() => {
-    console.log(content.children.length)
     if (content.children.length !== 0) {
       extractSubreddits(content);
     } else {

@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 import Loading from "./Loading";
 
 const Authorize = (props) => {
-  console.log("here");
   const history = useHistory();
   const state = new URLSearchParams(props.location.search).get("state");
   const error = new URLSearchParams(props.location.search).get("error");
@@ -14,10 +13,6 @@ const Authorize = (props) => {
   const encode = window.btoa(
     `${process.env.REACT_APP_CLIENT_ID}:${process.env.REACT_APP_SECRET}`
   );
-
-  console.log(state)
-  console.log(error)
-  console.log(code)
 
   React.useEffect(() => {
     if (state === sessionStorage.getItem("uuidState") && error !== "access_denied") {

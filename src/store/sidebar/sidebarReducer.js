@@ -19,7 +19,6 @@ const reducer = (state = initialState, action) => {
           }
           return allSubreddits;
         }, {});
-      console.log(reduceCounter);
 
       const sorted = Object.keys(reduceCounter)
         .sort(Intl.Collator().compare)
