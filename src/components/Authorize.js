@@ -15,7 +15,9 @@ const Authorize = (props) => {
   );
 
   React.useEffect(() => {
-    if (state === sessionStorage.getItem("uuidState") && error !== "access_denied") {
+    // if (state === sessionStorage.getItem("uuidState") && error !== "access_denied") {
+      const stateCheck = "7960142923"
+    if (state === stateCheck && error !== "access_denied") {
       axios
         .post(
           `https://www.reddit.com/api/v1/access_token`,
@@ -32,7 +34,6 @@ const Authorize = (props) => {
           }
         )
         .then((res) => {
-          console.log(res)
           sessionStorage.setItem("token", res.data.access_token);
           history.push("/home");
         })
