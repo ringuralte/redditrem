@@ -4,8 +4,7 @@ import { uuid } from "uuidv4";
 const SignIn = () => {
   const setUuid = () => {
     sessionStorage.setItem("uuidState", uuid());
-    window.location
-      .replace(`https://www.reddit.com/api/v1/authorize?client_id=${
+    window.location.href = `https://www.reddit.com/api/v1/authorize?client_id=${
       process.env.REACT_APP_CLIENT_ID
     }&response_type=code&state=${sessionStorage.getItem(
       "uuidState"
@@ -14,7 +13,7 @@ const SignIn = () => {
         ? process.env.REACT_APP_DEV_REDIRECT_URI
         : process.env.REACT_APP_REDIRECT_URI
     }&duration=temporary&scope=history identity save
-    `);
+    `;
   };
   return (
     <div className="grid md:grid-cols-2 bg-gray-100 min-h-screen">
@@ -34,7 +33,9 @@ const SignIn = () => {
           >
             LOG IN
           </button>
-          <span className="block pt-2 text-gray-800">Using your reddit account.</span>
+          <span className="block pt-2 text-gray-800">
+            Using your reddit account.
+          </span>
         </div>
       </div>
     </div>
