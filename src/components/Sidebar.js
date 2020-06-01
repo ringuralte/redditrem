@@ -32,7 +32,7 @@ const Sidebar = (props) => {
     >
       <ul className="pt-6">
         <input
-          className="border border-pink-600 w-11/12 p-2 m-2"
+          className="sticky top-0 border border-pink-600 w-11/12 p-2 m-2"
           type="text"
           value={inputState}
           onChange={handleChange}

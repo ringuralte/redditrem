@@ -6,7 +6,7 @@ import sidebarReducer from "./sidebar/sidebarReducer"
 const rootReducer = combineReducers({
   user: userReducer,
   savedContent: savedContentReducer,
-  sidebar: sidebarReducer
+  sidebar: sidebarReducer,
 })
 
 export default rootReducer

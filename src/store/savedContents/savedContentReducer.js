@@ -39,7 +39,9 @@ const reducer = (state = initialState, action) => {
     case FETCH_SAVED_FAILURE:
       return {
         loadingContent: false,
-        content: {},
+        content: {
+          ...state.content
+        },
         error: action.payload,
       };
     case FETCH_MORE_REQUEST:
@@ -67,6 +69,9 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         loadingMore: false,
+        content: {
+          ...state.content,
+        },
         error: action.payload
       }
 

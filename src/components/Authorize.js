@@ -16,7 +16,7 @@ const Authorize = (props) => {
 
   React.useEffect(() => {
     // if (state === sessionStorage.getItem("uuidState") && error !== "access_denied") {
-      const stateCheck = "7960142923"
+    const stateCheck = localStorage.getItem("state")
     if (state === stateCheck && error !== "access_denied") {
       axios
         .post(
@@ -38,6 +38,7 @@ const Authorize = (props) => {
           history.push("/home");
         })
         .catch((error) => {
+          localStorage.clear();
           sessionStorage.clear();
           history.push("/");
         });

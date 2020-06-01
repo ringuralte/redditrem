@@ -3,20 +3,12 @@ import { uuid } from "uuidv4";
 
 const SignIn = () => {
   const setUuid = () => {
-    // window.location.href = `https://www.reddit.com/api/v1/authorize.compact?client_id=${
-    //   process.env.REACT_APP_CLIENT_ID
-    // }&response_type=code&state=${sessionStorage.getItem(
-    //   "uuidState"
-    // )}&redirect_uri=${
-    //   process.env.NODE_ENV === "development"
-    //     ? process.env.REACT_APP_DEV_REDIRECT_URI
-    //     : process.env.REACT_APP_REDIRECT_URI
-    // }&duration=temporary&scope=history identity save
-    // `;
-    const state = "7960142923"
+    // const state = "7960142923";
+    localStorage.setItem("state", uuid())
+
     window.location.href = `https://www.reddit.com/api/v1/authorize?client_id=${
       process.env.REACT_APP_CLIENT_ID
-    }&response_type=code&state=${state}&redirect_uri=${
+    }&response_type=code&state=${localStorage.getItem("state")}&redirect_uri=${
       process.env.NODE_ENV === "development"
         ? process.env.REACT_APP_DEV_REDIRECT_URI
         : process.env.REACT_APP_REDIRECT_URI

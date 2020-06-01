@@ -16,9 +16,17 @@ const Home = ({
   fetchUser,
   username,
   content,
+  contentError,
   extractSubreddits,
 }) => {
   const history = useHistory();
+
+  // React.useEffect(() => {
+  //   if (error || contentError) {
+  //     sessionStorage.clear();
+  //     history.push("/");
+  //   }
+  // },[error, contentError]);
 
   React.useEffect(() => {
     if (!username) {
@@ -26,20 +34,20 @@ const Home = ({
     } else {
       fetchSavedContent(username);
     }
-  }, [username, fetchSavedContent, fetchUser, error]);
+  }, [username, fetchSavedContent, fetchUser]);
 
   React.useEffect(() => {
-    if (content.children.length !== 0) {
+    if (error || contentError) {
+      sessionStorage.clear();
+      history.push("/");
+    }
+    if (content.children.length ) {
       extractSubreddits(content);
     } else {
-      return undefined
+      return undefined;
     }
-  }, [content]);
+  }, [content, error, contentError]);
 
-  if (error) {
-    sessionStorage.clear();
-    history.push("/");
-  }
   if (loadingUsername || loadingSavedContent) {
     return <Loading text={"Fetching your data..."} />;
   } else return <Content />;
@@ -51,6 +59,7 @@ const mapStateToProps = (state) => {
     loadingSavedContent: state.savedContent.loadingContent,
     username: state.user.user,
     error: state.user.error,
+    contentError: state.savedContent.error,
     content: state.savedContent.content.data,
   };
 };
