@@ -8,7 +8,7 @@ const SignIn = () => {
 
     window.location.href = `https://www.reddit.com/api/v1/authorize?client_id=${
       process.env.REACT_APP_CLIENT_ID
-    }&response_type=code&state=${localStorage.getItem("state")}&redirect_uri=${
+    }&response_type=code&state=${sessionStorage.getItem("state")}&redirect_uri=${
       process.env.NODE_ENV === "development"
         ? process.env.REACT_APP_DEV_REDIRECT_URI
         : process.env.REACT_APP_REDIRECT_URI
