@@ -9,14 +9,13 @@ const Authorize = (props) => {
   const state = new URLSearchParams(props.location.search).get("state");
   const error = new URLSearchParams(props.location.search).get("error");
   const code = new URLSearchParams(props.location.search).get("code");
-  // const [loading, setLoading] = React.useState(true)
   const encode = window.btoa(
     `${process.env.REACT_APP_CLIENT_ID}:${process.env.REACT_APP_SECRET}`
   );
+  const [stateError, setStateError] = React.useState(false);
 
   React.useEffect(() => {
-    // if (state === sessionStorage.getItem("uuidState") && error !== "access_denied") {
-    const stateCheck = localStorage.getItem("state")
+    const stateCheck = sessionStorage.getItem("state");
     if (state === stateCheck && error !== "access_denied") {
       axios
         .post(
@@ -42,12 +41,21 @@ const Authorize = (props) => {
           sessionStorage.clear();
           history.push("/");
         });
+    } else if (state !== stateCheck) {
+      setStateError(true);
     } else if (error === "access_denied") {
       history.push("/");
     }
   }, []);
 
-  return <Loading text={"Authorizing your token..."} />;
+  return stateError ? (
+    <div>
+      Error with state, if you are on mobile try setting your default reddit app
+      to not open reddit links by default.
+    </div>
+  ) : (
+    <Loading text={"Authorizing your token..."} />
+  );
 };
 
 export default Authorize;
