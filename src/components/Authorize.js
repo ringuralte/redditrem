@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 
 import Loading from "./Loading";
 
@@ -15,7 +16,13 @@ const Authorize = (props) => {
   const [stateError, setStateError] = React.useState(false);
 
   React.useEffect(() => {
-    const stateCheck = sessionStorage.getItem("state");
+    let stateCheck
+    if (isMobile) {
+      stateCheck = "71892479128571289123-12391412960142923";
+    } else {
+      stateCheck = sessionStorage.getItem("state");
+    }
+    console.log(stateCheck)
     if (state === stateCheck && error !== "access_denied") {
       axios
         .post(

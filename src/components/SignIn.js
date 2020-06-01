@@ -1,14 +1,21 @@
 import React from "react";
 import { uuid } from "uuidv4";
+import { isMobile } from "react-device-detect";
 
 const SignIn = () => {
   const setUuid = () => {
-    // const state = "7960142923";
-    sessionStorage.setItem("state", uuid())
+    if (isMobile) {
+      const state = "71892479128571289123-12391412960142923";
+      sessionStorage.setItem("state", state);
+    } else {
+      sessionStorage.setItem("state", uuid());
+    }
 
     window.location.href = `https://www.reddit.com/api/v1/authorize?client_id=${
       process.env.REACT_APP_CLIENT_ID
-    }&response_type=code&state=${sessionStorage.getItem("state")}&redirect_uri=${
+    }&response_type=code&state=${sessionStorage.getItem(
+      "state"
+    )}&redirect_uri=${
       process.env.NODE_ENV === "development"
         ? process.env.REACT_APP_DEV_REDIRECT_URI
         : process.env.REACT_APP_REDIRECT_URI
