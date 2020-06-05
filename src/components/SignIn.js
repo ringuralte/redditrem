@@ -41,7 +41,6 @@ const SignIn = () => {
           <span className="block pt-2 text-gray-800">
             Using your reddit account.
           </span>
-          <div className="block pt-2">Here</div>
         </div>
       </div>
     </div>
