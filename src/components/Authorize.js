@@ -18,11 +18,10 @@ const Authorize = (props) => {
   React.useEffect(() => {
     let stateCheck
     if (isMobile) {
-      stateCheck = "71892479128571289123-12391412960142923";
+      stateCheck = process.env.REACT_APP_MOBILE_STATE;
     } else {
-      stateCheck = sessionStorage.getItem("state");
+      stateCheck = localStorage.getItem("state");
     }
-    console.log(stateCheck)
     if (state === stateCheck && error !== "access_denied") {
       axios
         .post(
@@ -40,12 +39,11 @@ const Authorize = (props) => {
           }
         )
         .then((res) => {
-          sessionStorage.setItem("token", res.data.access_token);
+          localStorage.setItem("token", res.data.access_token);
           history.push("/home");
         })
         .catch((error) => {
           localStorage.clear();
-          sessionStorage.clear();
           history.push("/");
         });
     } else if (state !== stateCheck) {

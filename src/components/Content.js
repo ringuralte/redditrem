@@ -5,38 +5,24 @@ import Sidebar from "./Sidebar";
 import Header from "./Header";
 import MainView from "./MainView";
 import { fetchMore } from "../store/savedContents/savedContentActions";
+import { showAll } from "../store/mainView/mainViewActions";
 
-const Content = ({ loadingMore, content, error, username, fetchMore }) => {
+const Content = (props) => {
   const history = useHistory();
-  const [state, setState] = React.useState({
-    all: true,
-    comments: false,
-    nsfw: false,
-    bySub: "",
-  });
 
   React.useEffect(() => {
-    if (error) {
+    if (props.error) {
       history.push("/");
     }
-  }, [error]);
+  }, [props.error]);
 
   const [sidebar, setSidebar] = React.useState(false);
 
   return (
     <div>
       <div className="min-h-screen">
-        <Header
-          sidebar={sidebar}
-          setSidebar={setSidebar}
-          setState={setState}
-          username={username}
-        />
-        <Sidebar
-          sidebar={sidebar}
-          setSidebar={setSidebar}
-          setState={setState}
-        />
+        <Header sidebar={sidebar} setSidebar={setSidebar} />
+        <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
         <div
           className={
             !sidebar
@@ -44,14 +30,12 @@ const Content = ({ loadingMore, content, error, username, fetchMore }) => {
               : "pointer-events-none container mx-auto px-1 py-2"
           }
         >
-          <ul>
-            <MainView state={state} />
-          </ul>
+          <MainView />
         </div>
       </div>
       <div className="bottom-0 mb-2 flex justify-center w-full">
-        {content.after ? (
-          loadingMore ? (
+        {props.content.after ? (
+          props.loadingMore ? (
             <div className="spinner-mini">
               <div className="rect1"></div>
               <div className="rect2"></div>
@@ -63,7 +47,7 @@ const Content = ({ loadingMore, content, error, username, fetchMore }) => {
             <button
               className="border-2 border-gray-800 rounded-lg px-4 py-2"
               onClick={() => {
-                fetchMore(username, content.after);
+                props.fetchMore(props.username, props.content.after);
               }}
             >
               Load More...
@@ -82,13 +66,15 @@ const mapStateToProps = (state) => {
     username: state.user.user,
     content: state.savedContent.content.data,
     loadingMore: state.savedContent.loadingMore,
-    error: state.savedContent.error
+    error: state.savedContent.error,
+    viewContent: state.mainView.content,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchMore: (username, after) => dispatch(fetchMore(username, after)),
+    showAll: () => dispatch(showAll()),
   };
 };
 

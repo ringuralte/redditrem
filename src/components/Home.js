@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { fetchUser } from "../store/user/userActions";
 import { fetchSavedContent } from "../store/savedContents/savedContentActions";
 import { extractSubreddits } from "../store/sidebar/sidebarActions";
+import { showAll } from "../store/mainView/mainViewActions";
 
 import Loading from "./Loading";
 import Content from "./Content";
@@ -18,15 +19,9 @@ const Home = ({
   content,
   contentError,
   extractSubreddits,
+  showAll,
 }) => {
   const history = useHistory();
-
-  // React.useEffect(() => {
-  //   if (error || contentError) {
-  //     sessionStorage.clear();
-  //     history.push("/");
-  //   }
-  // },[error, contentError]);
 
   React.useEffect(() => {
     if (!username) {
@@ -38,11 +33,12 @@ const Home = ({
 
   React.useEffect(() => {
     if (error || contentError) {
-      sessionStorage.clear();
+  localStorage.clear();
       history.push("/");
     }
-    if (content.children.length ) {
-      extractSubreddits(content);
+    if (content.children.length) {
+      showAll()
+      extractSubreddits();
     } else {
       return undefined;
     }
@@ -69,6 +65,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchUser: () => dispatch(fetchUser()),
     fetchSavedContent: (user) => dispatch(fetchSavedContent(user)),
     extractSubreddits: (subreddits) => dispatch(extractSubreddits(subreddits)),
+    showAll: () => dispatch(showAll()),
   };
 };
 

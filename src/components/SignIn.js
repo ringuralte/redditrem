@@ -5,23 +5,21 @@ import { isMobile } from "react-device-detect";
 const SignIn = () => {
   const setUuid = () => {
     if (isMobile) {
-      const state = "71892479128571289123-12391412960142923";
-      sessionStorage.setItem("state", state);
+      const state = process.env.REACT_APP_MOBILE_STATE;
+      localStorage.setItem("state", state);
     } else {
-      sessionStorage.setItem("state", uuid());
+      localStorage.setItem("state", uuid());
     }
-
     window.location.href = `https://www.reddit.com/api/v1/authorize?client_id=${
       process.env.REACT_APP_CLIENT_ID
-    }&response_type=code&state=${sessionStorage.getItem(
-      "state"
-    )}&redirect_uri=${
+    }&response_type=code&state=${localStorage.getItem("state")}&redirect_uri=${
       process.env.NODE_ENV === "development"
         ? process.env.REACT_APP_DEV_REDIRECT_URI
         : process.env.REACT_APP_REDIRECT_URI
     }&duration=temporary&scope=history identity save
     `;
   };
+
   return (
     <div className="grid md:grid-cols-2 bg-gray-100 min-h-screen">
       <div className="flex items-center justify-center md:mb-32">
@@ -38,11 +36,12 @@ const SignIn = () => {
             className="text-xl md:text-2xl tracking-wider border-2 rounded-md border-orange-600 hover:bg-orange-600 hover:text-white font-bold text-orange-600 py-4 px-6 md:py-6 md:px-8"
             onClick={setUuid}
           >
-            LOG IN
+            SIGN IN
           </button>
           <span className="block pt-2 text-gray-800">
             Using your reddit account.
           </span>
+          <div className="block pt-2">Here</div>
         </div>
       </div>
     </div>

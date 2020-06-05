@@ -11,7 +11,7 @@ export const fetchUser = () => {
     return axios
       .get(`https://oauth.reddit.com/api/v1/me`, {
         headers: {
-          Authorization: `bearer ${sessionStorage.getItem("token")}`,
+          Authorization: `bearer ${localStorage.getItem("token")}`,
         },
       })
       .then((res) => {

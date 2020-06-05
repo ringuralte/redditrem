@@ -1,111 +1,101 @@
 import React from "react";
 import { connect } from "react-redux";
 import { extractSubreddits } from "../store/sidebar/sidebarActions";
-const Sidebar = (props) => {
-  const node = React.useRef();
-  const handleClick = (e) => {
-    if (node.current.contains(e.target)) {
-      return;
-    }
-    props.setSidebar(false);
-  };
+import {
+  showAll,
+  showComments,
+  showNsfw,
+  showSubreddit,
+} from "../store/mainView/mainViewActions";
 
+const Sidebar = (props) => {
   const [inputState, setInputState] = React.useState("");
 
   const handleChange = (e) => {
     setInputState(e.target.value);
   };
 
-  React.useEffect(() => {
-    document.addEventListener("mousedown", handleClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClick);
-    };
-  }, []);
-
   return (
     <div
-      ref={node}
       id="sidebar"
-      className={props.sidebar ? "sidenav w-3/4 lg:w-2/5" : "sidenavhide"}
+      className={
+        props.sidebar ? "sidenav w-3/4 lg:w-2/5 relative sidebar-shadow" : "sidenavhide"
+      }
     >
-      <ul className="pt-6">
+      <button
+        onClick={() => props.setSidebar(false)}
+        className={
+          props.sidebar
+            ? `fixed top-0 right-0 bottom-0 left-0 h-full w-full cursor-default`
+            : `hidden`
+        }
+      />
+      <ul className="pt-6 absolute w-full bg-white h-full">
         <input
-          className="sticky top-0 border border-pink-600 w-11/12 p-2 m-2"
+          className="sticky top-0 border border-orange-600 w-11/12 p-2 m-2"
           type="text"
           value={inputState}
           onChange={handleChange}
           placeholder="Search"
         />
-        <li className="px-6 py-2 lg:hidden">
+        <li className="px-6 py-2 hover:bg-orange-500 hover:text-white">
           <button
-            className="lg:inline-block lg:mt-0 mr-4 lg:text-white lg:text-lg lg:font-medium"
+            className="w-full text-left"
             onClick={() => {
-              props.setState({
-                all: true,
-                comments: false,
-                nsfw: false,
-                bySub: "",
-              });
+              props.showAll();
               props.setSidebar(!props.sidebar);
+              window.scrollTo(0, 0);
             }}
           >
             All
           </button>
         </li>
 
-        <li className="px-6 py-2 lg:hidden">
+        <li className="px-6 py-2 hover:bg-orange-500 hover:text-white">
           <button
-            className="lg:inline-block lg:mt-0 mr-4 lg:text-white lg:text-lg lg:font-medium"
+            className="w-full text-left"
             onClick={() => {
-              props.setState({
-                all: false,
-                comments: true,
-                nsfw: false,
-                bySub: "",
-              });
+              props.showOnlyComments();
               props.setSidebar(!props.sidebar);
+              window.scrollTo(0, 0);
             }}
           >
             Comments
           </button>
         </li>
 
-        <li className="px-6 py-2 lg:hidden">
+        <li className="px-6 py-2 hover:bg-orange-500 hover:text-white">
           <button
-            className="lg:inline-block lg:mt-0 mr-4 lg:text-white lg:text-lg lg:font-medium"
+            className="w-full text-left"
             onClick={() => {
-              props.setState({
-                all: false,
-                comments: false,
-                nsfw: true,
-                bySub: "",
-              });
+              props.showOnlyNsfw();
               props.setSidebar(!props.sidebar);
+              window.scrollTo(0, 0);
             }}
           >
             NSFW
           </button>
         </li>
 
-        <div className="block lg:hidden w-full h-1 bg-gray-400" />
+        <div className="block w-full h-1 bg-gray-400" />
 
         {inputState
           ? Object.keys(props.sidebarData)
-              .filter((key) => key.toLowerCase().includes(inputState.toLowerCase()))
+              .filter((key) =>
+                key.toLowerCase().includes(inputState.toLowerCase())
+              )
               .map((key) => {
                 return (
-                  <li className="px-6 py-2" key={key}>
+                  <li
+                    className="px-6 py-2 hover:bg-orange-500 hover:text-white"
+                    key={key}
+                  >
                     <button
+                      className="w-full text-left"
                       onClick={() => {
-                        props.setState({
-                          all: false,
-                          comments: false,
-                          nsfw: false,
-                          bySub: key,
-                        });
+                        props.showOnlySub(key);
                         props.setSidebar(!props.sidebar);
+                        window.scrollTo(0, 0);
                       }}
                     >
                       r/{`${key} ${props.sidebarData[key]}`}
@@ -115,16 +105,16 @@ const Sidebar = (props) => {
               })
           : Object.keys(props.sidebarData).map((key) => {
               return (
-                <li className="px-6 py-2" key={key}>
+                <li
+                  className="px-6 py-2 hover:bg-orange-500 hover:text-white"
+                  key={key}
+                >
                   <button
+                    className="w-full text-left"
                     onClick={() => {
-                      props.setState({
-                        all: false,
-                        comments: false,
-                        nsfw: false,
-                        bySub: key,
-                      });
+                      props.showOnlySub(key);
                       props.setSidebar(!props.sidebar);
+                      window.scrollTo(0, 0);
                     }}
                   >
                     r/{`${key} (${props.sidebarData[key]})`}
@@ -139,14 +129,17 @@ const Sidebar = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    subreddits: state.savedContent.content.data,
-    sidebarData: state.sidebar,
+    sidebarData: state.sidebar.subreddits,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    extractSubreddits: (subreddits) => dispatch(extractSubreddits(subreddits)),
+    extractSubreddits: () => dispatch(extractSubreddits()),
+    showOnlyComments: () => dispatch(showComments()),
+    showAll: () => dispatch(showAll()),
+    showOnlyNsfw: () => dispatch(showNsfw()),
+    showOnlySub: (subreddit) => dispatch(showSubreddit(subreddit)),
   };
 };
 

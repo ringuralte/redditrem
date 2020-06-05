@@ -7,7 +7,6 @@ import {
   FETCH_MORE_SUCCESS,
   FETCH_MORE_FAILURE,
 } from "./savedContentTypes";
-// import { extractSubreddits } from "../sidebar/sidebarActions";
 
 export const fetchSavedContent = (username) => {
   return (dispatch) => {
@@ -15,12 +14,11 @@ export const fetchSavedContent = (username) => {
     return axios
       .get(`https://oauth.reddit.com/user/${username}/saved?limit=100`, {
         headers: {
-          Authorization: `bearer ${sessionStorage.getItem("token")}`,
+          Authorization: `bearer ${localStorage.getItem("token")}`,
         },
       })
       .then((res) => {
         dispatch(fetchSavedSuccess(res.data));
-        // dispatch(extractSubreddits(res.data));
       })
       .catch((error) => {
         dispatch(fetchSavedFailure(error));
@@ -36,14 +34,12 @@ export const fetchMore = (username, after) => {
         `https://oauth.reddit.com/user/${username}/saved?limit=100&after=${after}`,
         {
           headers: {
-            Authorization: `bearer ${sessionStorage.getItem("token")}`,
+            Authorization: `bearer ${localStorage.getItem("token")}`,
           },
         }
       )
       .then((res) => {
-        // console.log(res);
         dispatch(fetchMoreSuccess(res.data));
-        // dispatch(extractSubreddits(res.data))
       })
       .catch((error) => {
         dispatch(fetchSavedFailure(error));

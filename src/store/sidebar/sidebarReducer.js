@@ -7,7 +7,9 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case EXTRACT_SUBREDDITS:
-      return action.payload;
+      return {
+        subreddits: { ...state.subreddits, ...action.payload },
+      };
 
     default:
       return state;
