@@ -7,6 +7,16 @@ const SignIn = () => {
     if (isMobile) {
       const state = process.env.REACT_APP_MOBILE_STATE;
       localStorage.setItem("state", state);
+      window.location.href = `https://www.reddit.com/api/v1/authorize.compact?client_id=${
+        process.env.REACT_APP_CLIENT_ID
+      }&response_type=code&state=${localStorage.getItem(
+        "state"
+      )}&redirect_uri=${
+        process.env.NODE_ENV === "development"
+          ? process.env.REACT_APP_DEV_REDIRECT_URI
+          : process.env.REACT_APP_REDIRECT_URI
+      }&duration=temporary&scope=history identity save
+    `;
     } else {
       localStorage.setItem("state", uuid());
     }
