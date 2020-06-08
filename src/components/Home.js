@@ -8,6 +8,7 @@ import { showAll } from "../store/mainView/mainViewActions";
 
 import Loading from "./Loading";
 import Content from "./Content";
+import { errorMessageForHomePage } from "../store/error/errorActions";
 
 const Home = ({
   loadingUsername,
@@ -20,6 +21,7 @@ const Home = ({
   contentError,
   extractSubreddits,
   showAll,
+  declined,
 }) => {
   const history = useHistory();
 
@@ -33,16 +35,25 @@ const Home = ({
 
   React.useEffect(() => {
     if (error || contentError) {
-  localStorage.clear();
+      localStorage.clear();
+      declined("Session expired, please Sign In to continue");
       history.push("/");
     }
     if (content.children.length) {
-      showAll()
+      showAll();
       extractSubreddits();
     } else {
       return undefined;
     }
-  }, [content, error, contentError]);
+  }, [
+    content,
+    declined,
+    error,
+    contentError,
+    extractSubreddits,
+    history,
+    showAll,
+  ]);
 
   if (loadingUsername || loadingSavedContent) {
     return <Loading text={"Fetching your data..."} />;
@@ -66,6 +77,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchSavedContent: (user) => dispatch(fetchSavedContent(user)),
     extractSubreddits: (subreddits) => dispatch(extractSubreddits(subreddits)),
     showAll: () => dispatch(showAll()),
+    declined: (message) => dispatch(errorMessageForHomePage(message)),
   };
 };
 

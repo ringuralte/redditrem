@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom";
 import { showAll } from "../store/mainView/mainViewActions";
 import { fetchMore } from "../store/savedContents/savedContentActions";
 
-const Header = (props) => {
+const Header = ({ username, showAll, content, sidebar, setSidebar }) => {
   const history = useHistory();
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
 
@@ -14,7 +14,7 @@ const Header = (props) => {
         <div className="inline-block mr-2">
           <button
             className="flex items-center px-3 py-2 border-2 rounded text-white border-white"
-            onClick={() => props.setSidebar(!props.sidebar)}
+            onClick={() => setSidebar(!sidebar)}
           >
             <svg
               className="fill-current h-3 w-3"
@@ -28,7 +28,7 @@ const Header = (props) => {
         </div>
         <button
           onClick={() => {
-            props.showAll();
+            showAll();
             window.scrollTo(0, 0);
           }}
           className="font-semibold text-md lg:text-2xl tracking-tight"
@@ -41,7 +41,7 @@ const Header = (props) => {
           className="mr-4 py-2 leading-none mt-0 text-white text-sm font-semibold"
           onClick={() => setDropdownOpen(!dropdownOpen)}
         >
-          {`u/${props.username}`}
+          {`u/${username}`}
         </button>
         <button
           onClick={() => setDropdownOpen(false)}
@@ -60,22 +60,23 @@ const Header = (props) => {
         >
           <a
             className="block w-full text-left p-2 hover:bg-orange-500 hover:text-white overflow-hidden"
-            href={`https://reddit.com/user/${props.username}`}
+            href={`https://reddit.com/user/${username}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            u/{props.username}
+            u/{username}
           </a>
-          <button 
-          onClick={() => {
-            localStorage.clear();
-            history.push("/")
-          }}
-          className="block w-full text-left p-2 hover:bg-orange-500 hover:text-white">
+          <button
+            onClick={() => {
+              localStorage.clear();
+              history.push("/");
+            }}
+            className="block w-full text-left p-2 hover:bg-orange-500 hover:text-white"
+          >
             Sign Out
           </button>
           <div className="block text-sm text-gray-700 w-full text-left p-2">
-            Current: {Object.keys(props.content).length}
+            Current: {Object.keys(content).length}
           </div>
         </div>
       </div>

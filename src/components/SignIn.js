@@ -1,8 +1,9 @@
 import React from "react";
 import { uuid } from "uuidv4";
 import { isMobile } from "react-device-detect";
+import { connect } from "react-redux";
 
-const SignIn = () => {
+const SignIn = ({ errorMessage }) => {
   const setUuid = () => {
     if (isMobile) {
       const state = process.env.REACT_APP_MOBILE_STATE;
@@ -19,19 +20,30 @@ const SignIn = () => {
     `;
     } else {
       localStorage.setItem("state", uuid());
-    }
-    window.location.href = `https://www.reddit.com/api/v1/authorize?client_id=${
-      process.env.REACT_APP_CLIENT_ID
-    }&response_type=code&state=${localStorage.getItem("state")}&redirect_uri=${
-      process.env.NODE_ENV === "development"
-        ? process.env.REACT_APP_DEV_REDIRECT_URI
-        : process.env.REACT_APP_REDIRECT_URI
-    }&duration=temporary&scope=history identity save
+      window.location.href = `https://www.reddit.com/api/v1/authorize?client_id=${
+        process.env.REACT_APP_CLIENT_ID
+      }&response_type=code&state=${localStorage.getItem(
+        "state"
+      )}&redirect_uri=${
+        process.env.NODE_ENV === "development"
+          ? process.env.REACT_APP_DEV_REDIRECT_URI
+          : process.env.REACT_APP_REDIRECT_URI
+      }&duration=temporary&scope=history identity save
     `;
+    }
   };
 
   return (
     <div className="grid md:grid-cols-2 bg-gray-100 min-h-screen">
+      <div className="error-message">
+        <span
+          className={
+            errorMessage ? `block text-red-800 font-semibold` : `hidden`
+          }
+        >
+          {errorMessage}
+        </span>
+      </div>
       <div className="flex items-center justify-center md:mb-32">
         <div className="pt-32 md:pt-0 ">
           <h1 className="text-4xl md:text-6xl font-bold text-orange-600">
@@ -57,4 +69,10 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+const mapStateToProps = (state) => {
+  return {
+    errorMessage: state.error.errorMessage,
+  };
+};
+
+export default connect(mapStateToProps)(SignIn);

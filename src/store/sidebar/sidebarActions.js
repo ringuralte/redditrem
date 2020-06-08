@@ -24,11 +24,6 @@ export const extractSubreddits = () => {
 
     dispatch(extractSubs(sorted));
   };
-
-  // return {
-  //   type: EXTRACT_SUBREDDITS,
-  //   payload: sorted,
-  // };
 };
 
 export const extractSubs = (data) => {

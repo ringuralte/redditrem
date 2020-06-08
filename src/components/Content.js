@@ -1,20 +1,14 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
+
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import MainView from "./MainView";
+
 import { fetchMore } from "../store/savedContents/savedContentActions";
 import { showAll } from "../store/mainView/mainViewActions";
 
-const Content = (props) => {
-  const history = useHistory();
-
-  React.useEffect(() => {
-    if (props.error) {
-      history.push("/");
-    }
-  }, [props.error]);
+const Content = ({ content, loadingMore, fetchMore, username }) => {
 
   const [sidebar, setSidebar] = React.useState(false);
 
@@ -34,8 +28,8 @@ const Content = (props) => {
         </div>
       </div>
       <div className="bottom-0 mb-2 flex justify-center w-full">
-        {props.content.after ? (
-          props.loadingMore ? (
+        {content.after ? (
+          loadingMore ? (
             <div className="spinner-mini">
               <div className="rect1"></div>
               <div className="rect2"></div>
@@ -47,7 +41,8 @@ const Content = (props) => {
             <button
               className="border-2 border-gray-800 rounded-lg px-4 py-2"
               onClick={() => {
-                props.fetchMore(props.username, props.content.after);
+                //error is handled in Home.js
+                fetchMore(username, content.after);
               }}
             >
               Load More...
@@ -67,7 +62,6 @@ const mapStateToProps = (state) => {
     content: state.savedContent.content.data,
     loadingMore: state.savedContent.loadingMore,
     error: state.savedContent.error,
-    viewContent: state.mainView.content,
   };
 };
 
