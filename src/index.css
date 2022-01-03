@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* body {
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+   sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+	 }
+
+	 code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+   monospace;
+	 } */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spinner {
+  margin: 24px auto;
+  width: 120px;
+  height: 80px;
+  text-align: center;
+  font-size: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.spinner > div {
+  background-color: #dd6b20;
+  height: 100%;
+  width: 12px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+
+.spinner-mini {
+  margin: 12px auto;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 8px;
+}
+
+.spinner-mini > div {
+  background-color: #dd6b20;
+  height: 100%;
+  width: 8px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner-mini .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner-mini .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner-mini .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner-mini .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.sidenav {
+  height: full;
+  /* width: 250px; */
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: 0.5s;
+
+}
+
+.sidenav::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.sidenav > ul {
+  top: 0;
+  bottom: 0;
+}
+
+/* .sidenav > button {
+  background-color: red;
+} */
+
+.sidenavhide {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+
+.sidenavhide > ul {
+  display: none;
+}
+
+.image-width {
+  min-width: 90px;
+  max-width: 90px;
+}
+
+.sidebar-shadow {
+  box-shadow:  0 25px 50px -12px rgba(0, 0, 0, .25), 0 20px 25px -5px rgba(0, 0, 0, .15);
+}
+
+.error-message {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 20%;
 }

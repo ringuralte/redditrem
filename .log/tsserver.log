@@ -1,0 +1,686 @@
+Info 0    [17:33:58.275] Starting TS Server
+Info 1    [17:33:58.280] Version: 4.5.4
+Info 2    [17:33:58.280] Arguments: /home/ringu/.nvm/versions/node/v16.13.0/bin/node /home/ringu/Projects/redditrem/node_modules/typescript/lib/tsserver.js --logFile /home/ringu/Projects/redditrem/.log/tsserver.log --logVerbosity info --cancellationPipeName /tmp/6ad7d20c1b33e98e716015967927a50b/tscancellation*
+Info 3    [17:33:58.280] Platform: linux NodeVersion: 16 CaseSensitive: true
+Info 4    [17:33:58.280] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [17:33:58.298] Format host information updated
+Info 6    [17:33:58.301] Search path: /home/ringu/Projects/redditrem/src/components
+Info 7    [17:33:58.304] For info: /home/ringu/Projects/redditrem/src/components/App.tsx :: Config file name: /home/ringu/Projects/redditrem/tsconfig.json
+Info 8    [17:33:58.304] Creating configuration project /home/ringu/Projects/redditrem/tsconfig.json
+Info 9    [17:33:58.329] Config: /home/ringu/Projects/redditrem/tsconfig.json : {
+ "rootNames": [
+  "/home/ringu/Projects/redditrem/src/components/App.tsx",
+  "/home/ringu/Projects/redditrem/src/components/SignIn.tsx",
+  "/home/ringu/Projects/redditrem/src/store/rootReducer.ts",
+  "/home/ringu/Projects/redditrem/src/store/store.ts",
+  "/home/ringu/Projects/redditrem/src/store/user/userActions.ts",
+  "/home/ringu/Projects/redditrem/src/store/user/userReducer.ts",
+  "/home/ringu/Projects/redditrem/src/store/user/userSlice.ts",
+  "/home/ringu/Projects/redditrem/src/store/user/userTypes.ts"
+ ],
+ "options": {
+  "allowJs": false,
+  "allowSyntheticDefaultImports": true,
+  "alwaysStrict": true,
+  "esModuleInterop": true,
+  "forceConsistentCasingInFileNames": true,
+  "isolatedModules": true,
+  "jsx": 2,
+  "lib": [
+   "lib.dom.d.ts",
+   "lib.dom.iterable.d.ts",
+   "lib.esnext.d.ts"
+  ],
+  "module": 99,
+  "moduleResolution": 2,
+  "noEmit": true,
+  "noImplicitAny": true,
+  "noImplicitThis": true,
+  "resolveJsonModule": true,
+  "skipLibCheck": true,
+  "strict": true,
+  "strictPropertyInitialization": true,
+  "target": 2,
+  "configFilePath": "/home/ringu/Projects/redditrem/tsconfig.json"
+ }
+}
+Info 10   [17:33:58.499] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 11   [17:34:00.834] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 2335.1730499998666ms
+Info 12   [17:34:00.834] Project '/home/ringu/Projects/redditrem/tsconfig.json' (Configured)
+Info 13   [17:34:00.834] 	Files (217)
+
+Info 14   [17:34:00.834] -----------------------------------------------
+Info 15   [17:34:00.857] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 16   [17:34:01.050] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 192.5932980000507ms
+Info 17   [17:34:01.050] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 18   [17:34:01.050] 	Files (101)
+
+Info 19   [17:34:01.050] -----------------------------------------------
+Info 20   [17:34:24.562] Search path: /home/ringu/Projects/redditrem/src
+Info 21   [17:34:24.562] For info: /home/ringu/Projects/redditrem/src/index.js :: Config file name: /home/ringu/Projects/redditrem/tsconfig.json
+Info 22   [17:34:24.564] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 23   [17:34:26.395] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 1831.1694209999405ms
+Info 24   [17:34:26.396] Project '/dev/null/inferredProject1*' (Inferred)
+Info 25   [17:34:26.396] 	Files (263)
+
+Info 26   [17:34:26.396] -----------------------------------------------
+Info 27   [17:34:29.838] Format host information updated
+Info 28   [17:34:30.037] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 29   [17:34:30.131] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 2 structureChanged: true structureIsReused:: SafeModules Elapsed: 94.38938400009647ms
+Info 30   [17:34:30.132] Different program with same set of files
+Info 31   [17:34:30.869] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 32   [17:34:30.914] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 3 structureChanged: false structureIsReused:: Completely Elapsed: 44.36177399987355ms
+Info 33   [17:34:30.914] Different program with same set of files
+Info 34   [17:34:30.945] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 35   [17:34:30.973] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 4 structureChanged: false structureIsReused:: Completely Elapsed: 27.82908000005409ms
+Info 36   [17:34:30.973] Different program with same set of files
+Info 37   [17:34:31.039] getCompletionData: Get current token: 0.015636999858543277
+Info 38   [17:34:31.039] getCompletionData: Is inside comment: 0.042067999951541424
+Info 39   [17:34:31.040] getCompletionData: Get previous token: 0.05329299997538328
+Info 40   [17:34:31.040] getCompletionsAtPosition: isCompletionListBlocker: 0.40942500019446015
+Info 41   [17:34:31.062] getExportInfoMap: cache miss or empty; calculating new results
+Info 42   [17:34:31.139] getExportInfoMap: done in 94.7544329999946 ms
+Info 43   [17:34:31.191] collectAutoImports: resolved 18 module specifiers, plus 132 ambient and -286 from cache
+Info 44   [17:34:31.191] collectAutoImports: response is complete
+Info 45   [17:34:31.191] collectAutoImports: 40.28682000003755
+Info 46   [17:34:31.191] getCompletionData: Semantic work: 150.5555330000352
+Info 47   [17:34:31.213] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 21.8584489999339
+Info 48   [17:34:31.220] getCompletionData: Get current token: 0.007405000040307641
+Info 49   [17:34:31.220] getCompletionData: Is inside comment: 0.017841999884694815
+Info 50   [17:34:31.220] getCompletionData: Get previous token: 0.022941000061109662
+Info 51   [17:34:31.220] getCompletionsAtPosition: isCompletionListBlocker: 0.013630999950692058
+Info 52   [17:34:31.236] getExportInfoMap: cache hit
+Info 53   [17:34:31.269] collectAutoImports: resolved 1 module specifiers, plus 132 ambient and 31 from cache
+Info 54   [17:34:31.269] collectAutoImports: response is complete
+Info 55   [17:34:31.269] collectAutoImports: 21.65215799980797
+Info 56   [17:34:31.269] getCompletionData: Semantic work: 48.52112799999304
+Info 57   [17:34:31.283] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 14.167756000068039
+Info 58   [17:34:31.288] getCompletionData: Get current token: 0.00659200013615191
+Info 59   [17:34:31.288] getCompletionData: Is inside comment: 0.016424000030383468
+Info 60   [17:34:31.288] getCompletionData: Get previous token: 0.02166399988345802
+Info 61   [17:34:31.288] getCompletionsAtPosition: isCompletionListBlocker: 0.013488000025972724
+Info 62   [17:34:31.304] getExportInfoMap: cache hit
+Info 63   [17:34:31.331] collectAutoImports: resolved 0 module specifiers, plus 132 ambient and 60 from cache
+Info 64   [17:34:31.331] collectAutoImports: response is complete
+Info 65   [17:34:31.331] collectAutoImports: 15.286986000137404
+Info 66   [17:34:31.331] getCompletionData: Semantic work: 43.2857349999249
+Info 67   [17:34:31.349] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 17.15392899978906
+Info 68   [17:34:31.353] getCompletionData: Get current token: 0.007562000071629882
+Info 69   [17:34:31.353] getCompletionData: Is inside comment: 0.01646100007928908
+Info 70   [17:34:31.354] getCompletionData: Get previous token: 0.022015000227838755
+Info 71   [17:34:31.354] getCompletionsAtPosition: isCompletionListBlocker: 0.01394500001333654
+Info 72   [17:34:31.370] getExportInfoMap: cache hit
+Info 73   [17:34:31.394] collectAutoImports: resolved 0 module specifiers, plus 132 ambient and 60 from cache
+Info 74   [17:34:31.394] collectAutoImports: response is complete
+Info 75   [17:34:31.394] collectAutoImports: 12.572449000086635
+Info 76   [17:34:31.394] getCompletionData: Semantic work: 40.79251499986276
+Info 77   [17:34:31.406] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 9.739574000006542
+Info 78   [17:34:31.411] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 79   [17:34:31.442] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 5 structureChanged: false structureIsReused:: Completely Elapsed: 30.95418499992229ms
+Info 80   [17:34:31.442] Different program with same set of files
+Info 81   [17:34:31.442] getCompletionData: Get current token: 0.008294000057503581
+Info 82   [17:34:31.443] getCompletionData: Is inside comment: 0.02214400004595518
+Info 83   [17:34:31.443] getCompletionData: Get previous token: 0.023436000104993582
+Info 84   [17:34:31.443] getCompletionsAtPosition: isCompletionListBlocker: 0.019256999948993325
+Info 85   [17:34:31.457] getExportInfoMap: cache hit
+Info 86   [17:34:31.489] collectAutoImports: resolved 0 module specifiers, plus 30 ambient and 17 from cache
+Info 87   [17:34:31.489] collectAutoImports: response is complete
+Info 88   [17:34:31.489] collectAutoImports: 19.949229000136256
+Info 89   [17:34:31.489] getCompletionData: Semantic work: 46.81393599999137
+Info 90   [17:34:31.502] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 12.60788800008595
+Info 91   [17:34:31.517] getCompletionData: Get current token: 0.009352999972179532
+Info 92   [17:34:31.517] getCompletionData: Is inside comment: 0.026497999904677272
+Info 93   [17:34:31.517] getCompletionData: Get previous token: 0.029141000006347895
+Info 94   [17:34:31.517] getCompletionsAtPosition: isCompletionListBlocker: 0.019222999922931194
+Info 95   [17:34:31.532] getExportInfoMap: cache hit
+Info 96   [17:34:31.550] collectAutoImports: resolved 0 module specifiers, plus 30 ambient and 17 from cache
+Info 97   [17:34:31.550] collectAutoImports: response is complete
+Info 98   [17:34:31.550] collectAutoImports: 6.051787999924272
+Info 99   [17:34:31.550] getCompletionData: Semantic work: 32.799706999910995
+Info 100  [17:34:31.562] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 10.840880000032485
+Info 101  [17:34:31.566] getCompletionData: Get current token: 0.010137000121176243
+Info 102  [17:34:31.566] getCompletionData: Is inside comment: 0.02026199991814792
+Info 103  [17:34:31.566] getCompletionData: Get previous token: 0.025846999837085605
+Info 104  [17:34:31.566] getCompletionsAtPosition: isCompletionListBlocker: 0.016051999991759658
+Info 105  [17:34:31.582] getExportInfoMap: cache hit
+Info 106  [17:34:31.599] collectAutoImports: resolved 0 module specifiers, plus 30 ambient and 17 from cache
+Info 107  [17:34:31.599] collectAutoImports: response is complete
+Info 108  [17:34:31.599] collectAutoImports: 6.128412999911234
+Info 109  [17:34:31.599] getCompletionData: Semantic work: 33.06531800003722
+Info 110  [17:34:31.606] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 6.484070000005886
+Info 111  [17:34:31.609] getCompletionData: Get current token: 0.008119000121951103
+Info 112  [17:34:31.609] getCompletionData: Is inside comment: 0.01801200001500547
+Info 113  [17:34:31.609] getCompletionData: Get previous token: 0.020025000208988786
+Info 114  [17:34:31.609] getCompletionsAtPosition: isCompletionListBlocker: 0.014444000087678432
+Info 115  [17:34:31.624] getExportInfoMap: cache hit
+Info 116  [17:34:31.648] collectAutoImports: resolved 0 module specifiers, plus 30 ambient and 17 from cache
+Info 117  [17:34:31.648] collectAutoImports: response is complete
+Info 118  [17:34:31.648] collectAutoImports: 9.237094999989495
+Info 119  [17:34:31.648] getCompletionData: Semantic work: 38.99388199998066
+Info 120  [17:34:31.653] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 4.7592139998450875
+Info 121  [17:34:31.656] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 122  [17:34:31.687] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 6 structureChanged: false structureIsReused:: Completely Elapsed: 31.51975500001572ms
+Info 123  [17:34:31.687] Different program with same set of files
+Info 124  [17:34:31.688] getCompletionData: Get current token: 0.008553000167012215
+Info 125  [17:34:31.688] getCompletionData: Is inside comment: 0.016192999901250005
+Info 126  [17:34:31.688] getCompletionData: Get previous token: 0.019646999891847372
+Info 127  [17:34:31.688] getCompletionsAtPosition: isCompletionListBlocker: 0.01668699993751943
+Info 128  [17:34:31.701] getExportInfoMap: cache hit
+Info 129  [17:34:31.726] collectAutoImports: resolved 0 module specifiers, plus 5 ambient and 3 from cache
+Info 130  [17:34:31.726] collectAutoImports: response is complete
+Info 131  [17:34:31.726] collectAutoImports: 14.129355999873951
+Info 132  [17:34:31.726] getCompletionData: Semantic work: 38.156711999792606
+Info 133  [17:34:31.735] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 8.928236000007018
+Info 134  [17:34:31.746] getCompletionData: Get current token: 0.006572999991476536
+Info 135  [17:34:31.746] getCompletionData: Is inside comment: 0.0165049999486655
+Info 136  [17:34:31.746] getCompletionData: Get previous token: 0.019759999820962548
+Info 137  [17:34:31.746] getCompletionsAtPosition: isCompletionListBlocker: 0.016109999967738986
+Info 138  [17:34:31.760] getExportInfoMap: cache hit
+Info 139  [17:34:31.775] collectAutoImports: resolved 0 module specifiers, plus 5 ambient and 3 from cache
+Info 140  [17:34:31.775] collectAutoImports: response is complete
+Info 141  [17:34:31.775] collectAutoImports: 4.387069999938831
+Info 142  [17:34:31.775] getCompletionData: Semantic work: 28.901515999808908
+Info 143  [17:34:31.785] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 8.981978999916464
+Info 144  [17:34:31.788] getCompletionData: Get current token: 0.007955000037327409
+Info 145  [17:34:31.788] getCompletionData: Is inside comment: 0.015527000185102224
+Info 146  [17:34:31.788] getCompletionData: Get previous token: 0.018814999843016267
+Info 147  [17:34:31.788] getCompletionsAtPosition: isCompletionListBlocker: 0.015971000073477626
+Info 148  [17:34:31.801] getExportInfoMap: cache hit
+Info 149  [17:34:31.816] collectAutoImports: resolved 0 module specifiers, plus 5 ambient and 3 from cache
+Info 150  [17:34:31.816] collectAutoImports: response is complete
+Info 151  [17:34:31.817] collectAutoImports: 4.204494000179693
+Info 152  [17:34:31.817] getCompletionData: Semantic work: 28.632961000083014
+Info 153  [17:34:31.824] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 7.358333999989554
+Info 154  [17:34:31.827] getCompletionData: Get current token: 0.008371999952942133
+Info 155  [17:34:31.827] getCompletionData: Is inside comment: 0.02016299986280501
+Info 156  [17:34:31.827] getCompletionData: Get previous token: 0.021711000008508563
+Info 157  [17:34:31.827] getCompletionsAtPosition: isCompletionListBlocker: 0.01763000013306737
+Info 158  [17:34:31.843] getExportInfoMap: cache hit
+Info 159  [17:34:31.858] collectAutoImports: resolved 0 module specifiers, plus 5 ambient and 3 from cache
+Info 160  [17:34:31.858] collectAutoImports: response is complete
+Info 161  [17:34:31.858] collectAutoImports: 4.088969000149518
+Info 162  [17:34:31.858] getCompletionData: Semantic work: 31.402872999897227
+Info 163  [17:34:31.866] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 5.589107000036165
+Info 164  [17:34:31.869] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 165  [17:34:31.903] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 7 structureChanged: false structureIsReused:: Completely Elapsed: 33.79173699999228ms
+Info 166  [17:34:31.903] Different program with same set of files
+Info 167  [17:34:31.903] getCompletionData: Get current token: 0.008830999955534935
+Info 168  [17:34:31.903] getCompletionData: Is inside comment: 0.016386999981477857
+Info 169  [17:34:31.903] getCompletionData: Get previous token: 0.019185999874025583
+Info 170  [17:34:31.903] getCompletionsAtPosition: isCompletionListBlocker: 0.09170900005847216
+Info 171  [17:34:31.917] getExportInfoMap: cache hit
+Info 172  [17:34:31.944] collectAutoImports: resolved 0 module specifiers, plus 2 ambient and 0 from cache
+Info 173  [17:34:31.944] collectAutoImports: response is complete
+Info 174  [17:34:31.944] collectAutoImports: 14.552354000043124
+Info 175  [17:34:31.944] getCompletionData: Semantic work: 41.21104099997319
+Info 176  [17:34:31.954] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 9.824448000174016
+Info 177  [17:34:31.960] getCompletionData: Get current token: 0.007072999840602279
+Info 178  [17:34:31.960] getCompletionData: Is inside comment: 0.016238999785855412
+Info 179  [17:34:31.960] getCompletionData: Get previous token: 0.01928299991413951
+Info 180  [17:34:31.960] getCompletionsAtPosition: isCompletionListBlocker: 0.014662999892607331
+Info 181  [17:34:31.974] getExportInfoMap: cache hit
+Info 182  [17:34:31.989] collectAutoImports: resolved 0 module specifiers, plus 2 ambient and 0 from cache
+Info 183  [17:34:31.989] collectAutoImports: response is complete
+Info 184  [17:34:31.989] collectAutoImports: 3.769146000035107
+Info 185  [17:34:31.989] getCompletionData: Semantic work: 28.310571999987587
+Info 186  [17:34:31.999] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 8.93855999992229
+Info 187  [17:34:32.002] getCompletionData: Get current token: 0.007332999957725406
+Info 188  [17:34:32.002] getCompletionData: Is inside comment: 0.016623999923467636
+Info 189  [17:34:32.002] getCompletionData: Get previous token: 0.019859999883919954
+Info 190  [17:34:32.002] getCompletionsAtPosition: isCompletionListBlocker: 0.015496000181883574
+Info 191  [17:34:32.019] getExportInfoMap: cache hit
+Info 192  [17:34:32.034] collectAutoImports: resolved 0 module specifiers, plus 2 ambient and 0 from cache
+Info 193  [17:34:32.034] collectAutoImports: response is complete
+Info 194  [17:34:32.034] collectAutoImports: 3.7203029999509454
+Info 195  [17:34:32.034] getCompletionData: Semantic work: 31.58404800016433
+Info 196  [17:34:32.040] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 6.611799999838695
+Info 197  [17:34:32.043] getCompletionData: Get current token: 0.008929000003263354
+Info 198  [17:34:32.043] getCompletionData: Is inside comment: 0.020121000008657575
+Info 199  [17:34:32.043] getCompletionData: Get previous token: 0.022246000124141574
+Info 200  [17:34:32.043] getCompletionsAtPosition: isCompletionListBlocker: 0.015519999898970127
+Info 201  [17:34:32.061] getExportInfoMap: cache hit
+Info 202  [17:34:32.077] collectAutoImports: resolved 0 module specifiers, plus 2 ambient and 0 from cache
+Info 203  [17:34:32.077] collectAutoImports: response is complete
+Info 204  [17:34:32.077] collectAutoImports: 3.7588480000849813
+Info 205  [17:34:32.077] getCompletionData: Semantic work: 33.61288799997419
+Info 206  [17:34:32.081] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 4.3637090001720935
+Info 207  [17:34:32.084] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 208  [17:34:32.119] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 8 structureChanged: false structureIsReused:: Completely Elapsed: 34.74660399998538ms
+Info 209  [17:34:32.119] Different program with same set of files
+Info 210  [17:34:32.119] getCompletionData: Get current token: 0.009028999833390117
+Info 211  [17:34:32.119] getCompletionData: Is inside comment: 0.01679799985140562
+Info 212  [17:34:32.119] getCompletionData: Get previous token: 0.022665999829769135
+Info 213  [17:34:32.119] getCompletionsAtPosition: isCompletionListBlocker: 0.014413000084459782
+Info 214  [17:34:32.132] getExportInfoMap: cache hit
+Info 215  [17:34:32.151] collectAutoImports: resolved 0 module specifiers, plus 1 ambient and 0 from cache
+Info 216  [17:34:32.151] collectAutoImports: response is complete
+Info 217  [17:34:32.151] collectAutoImports: 8.99333900003694
+Info 218  [17:34:32.151] getCompletionData: Semantic work: 31.706477999920025
+Info 219  [17:34:32.156] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 4.547806999878958
+Info 220  [17:34:32.161] getCompletionData: Get current token: 0.005675999913364649
+Info 221  [17:34:32.161] getCompletionData: Is inside comment: 0.025652999989688396
+Info 222  [17:34:32.161] getCompletionData: Get previous token: 0.02026999997906387
+Info 223  [17:34:32.161] getCompletionsAtPosition: isCompletionListBlocker: 0.013561000116169453
+Info 224  [17:34:32.175] getExportInfoMap: cache hit
+Info 225  [17:34:32.193] collectAutoImports: resolved 0 module specifiers, plus 1 ambient and 0 from cache
+Info 226  [17:34:32.193] collectAutoImports: response is complete
+Info 227  [17:34:32.193] collectAutoImports: 5.060874999966472
+Info 228  [17:34:32.193] getCompletionData: Semantic work: 31.936814999906346
+Info 229  [17:34:32.198] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 4.423537999857217
+Info 230  [17:34:32.200] getCompletionData: Get current token: 0.007774000056087971
+Info 231  [17:34:32.200] getCompletionData: Is inside comment: 0.01732399989850819
+Info 232  [17:34:32.201] getCompletionData: Get previous token: 0.020813000155612826
+Info 233  [17:34:32.201] getCompletionsAtPosition: isCompletionListBlocker: 0.01569899986498058
+Info 234  [17:34:32.213] getExportInfoMap: cache hit
+Info 235  [17:34:32.227] collectAutoImports: resolved 0 module specifiers, plus 1 ambient and 0 from cache
+Info 236  [17:34:32.227] collectAutoImports: response is complete
+Info 237  [17:34:32.227] collectAutoImports: 3.6193379999604076
+Info 238  [17:34:32.227] getCompletionData: Semantic work: 26.841592999873683
+Info 239  [17:34:32.232] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 4.372480999911204
+Info 240  [17:34:32.235] getCompletionData: Get current token: 0.008292000042274594
+Info 241  [17:34:32.235] getCompletionData: Is inside comment: 0.017112999921664596
+Info 242  [17:34:32.235] getCompletionData: Get previous token: 0.01888899994082749
+Info 243  [17:34:32.235] getCompletionsAtPosition: isCompletionListBlocker: 0.015298000071197748
+Info 244  [17:34:32.249] getExportInfoMap: cache hit
+Info 245  [17:34:32.267] collectAutoImports: resolved 0 module specifiers, plus 1 ambient and 0 from cache
+Info 246  [17:34:32.267] collectAutoImports: response is complete
+Info 247  [17:34:32.267] collectAutoImports: 3.8023149999789894
+Info 248  [17:34:32.267] getCompletionData: Semantic work: 32.302530999993905
+Info 249  [17:34:32.271] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 4.35840900009498
+Info 250  [17:34:32.274] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 251  [17:34:32.304] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 9 structureChanged: false structureIsReused:: Completely Elapsed: 29.29446000000462ms
+Info 252  [17:34:32.304] Different program with same set of files
+Info 253  [17:34:32.304] getCompletionData: Get current token: 0.008085000095888972
+Info 254  [17:34:32.304] getCompletionData: Is inside comment: 0.01631900016218424
+Info 255  [17:34:32.304] getCompletionData: Get previous token: 0.01959999999962747
+Info 256  [17:34:32.304] getCompletionsAtPosition: isCompletionListBlocker: 0.014257000060752034
+Info 257  [17:34:32.319] getExportInfoMap: cache hit
+Info 258  [17:34:32.408] collectAutoImports: resolved 32 module specifiers, plus 908 ambient and -1806 from cache
+Info 259  [17:34:32.408] collectAutoImports: response is complete
+Info 260  [17:34:32.408] collectAutoImports: 77.069703000132
+Info 261  [17:34:32.408] getCompletionData: Semantic work: 103.78530799993314
+Info 262  [17:34:32.438] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 29.640507999807596
+Info 263  [17:34:32.455] getCompletionData: Get current token: 0.007997999899089336
+Info 264  [17:34:32.455] getCompletionData: Is inside comment: 0.01760099991224706
+Info 265  [17:34:32.455] getCompletionData: Get previous token: 0.019914999837055802
+Info 266  [17:34:32.456] getCompletionsAtPosition: isCompletionListBlocker: 0.14175800001248717
+Info 267  [17:34:32.469] getExportInfoMap: cache hit
+Info 268  [17:34:32.530] collectAutoImports: resolved 1 module specifiers, plus 908 ambient and 272 from cache
+Info 269  [17:34:32.530] collectAutoImports: response is complete
+Info 270  [17:34:32.530] collectAutoImports: 50.41813900019042
+Info 271  [17:34:32.530] getCompletionData: Semantic work: 74.80645900010131
+Info 272  [17:34:32.552] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 20.098946999991313
+Info 273  [17:34:32.563] getCompletionData: Get current token: 0.00966300000436604
+Info 274  [17:34:32.563] getCompletionData: Is inside comment: 0.022846000036224723
+Info 275  [17:34:32.563] getCompletionData: Get previous token: 0.022081000031903386
+Info 276  [17:34:32.563] getCompletionsAtPosition: isCompletionListBlocker: 0.023284999886527658
+Info 277  [17:34:32.578] getExportInfoMap: cache hit
+Info 278  [17:34:32.627] collectAutoImports: resolved 0 module specifiers, plus 908 ambient and 344 from cache
+Info 279  [17:34:32.627] collectAutoImports: response is complete
+Info 280  [17:34:32.627] collectAutoImports: 36.95847599999979
+Info 281  [17:34:32.627] getCompletionData: Semantic work: 64.21687099989504
+Info 282  [17:34:32.638] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 10.611901000142097
+Info 283  [17:34:32.646] getCompletionData: Get current token: 0.008259000023826957
+Info 284  [17:34:32.646] getCompletionData: Is inside comment: 0.018748000031337142
+Info 285  [17:34:32.646] getCompletionData: Get previous token: 0.019580999854952097
+Info 286  [17:34:32.646] getCompletionsAtPosition: isCompletionListBlocker: 0.015835999976843596
+Info 287  [17:34:32.659] getExportInfoMap: cache hit
+Info 288  [17:34:32.703] collectAutoImports: resolved 0 module specifiers, plus 908 ambient and 344 from cache
+Info 289  [17:34:32.703] collectAutoImports: response is complete
+Info 290  [17:34:32.703] collectAutoImports: 33.320944000035524
+Info 291  [17:34:32.703] getCompletionData: Semantic work: 56.45785899995826
+Info 292  [17:34:32.715] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 11.605855999980122
+Info 293  [17:34:32.724] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 294  [17:34:32.756] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 10 structureChanged: false structureIsReused:: Completely Elapsed: 32.12897399999201ms
+Info 295  [17:34:32.756] Different program with same set of files
+Info 296  [17:34:32.756] getCompletionData: Get current token: 0.006810999941080809
+Info 297  [17:34:32.756] getCompletionData: Is inside comment: 0.015042999992147088
+Info 298  [17:34:32.756] getCompletionData: Get previous token: 0.014842000091448426
+Info 299  [17:34:32.769] getExportInfoMap: cache hit
+Info 300  [17:34:32.857] collectAutoImports: resolved 5 module specifiers, plus 1356 ambient and -254 from cache
+Info 301  [17:34:32.857] collectAutoImports: response is complete
+Info 302  [17:34:32.857] collectAutoImports: 77.57204700005241
+Info 303  [17:34:32.857] getCompletionData: Semantic work: 100.13171800016426
+Info 304  [17:34:32.909] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 52.2922550002113
+Info 305  [17:34:34.564] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 306  [17:34:34.637] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 11 structureChanged: true structureIsReused:: SafeModules Elapsed: 72.62296700011939ms
+Info 307  [17:34:34.637] Project '/dev/null/inferredProject1*' (Inferred)
+Info 308  [17:34:34.637] 	Files (212)
+
+Info 309  [17:34:34.637] -----------------------------------------------
+Info 310  [17:34:34.638] getCompletionData: Get current token: 0.009189999895170331
+Info 311  [17:34:34.638] getCompletionData: Is inside comment: 0.018001999938860536
+Info 312  [17:34:34.638] getCompletionData: Get previous token: 0.01348099997267127
+Info 313  [17:34:34.638] getCompletionsAtPosition: isCompletionListBlocker: 0.005389000056311488
+Info 314  [17:34:34.639] getCompletionData: Semantic work: 0.8777119999285787
+Info 315  [17:34:34.639] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 0.23781799990683794
+Info 316  [17:34:34.777] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 317  [17:34:34.838] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 12 structureChanged: true structureIsReused:: SafeModules Elapsed: 60.33987100003287ms
+Info 318  [17:34:34.838] Project '/dev/null/inferredProject1*' (Inferred)
+Info 319  [17:34:34.838] 	Files (263)
+
+Info 320  [17:34:34.838] -----------------------------------------------
+Info 321  [17:34:34.839] getCompletionData: Get current token: 0.008105000015348196
+Info 322  [17:34:34.839] getCompletionData: Is inside comment: 0.014150000177323818
+Info 323  [17:34:34.839] getCompletionData: Get previous token: 0.01145999995060265
+Info 324  [17:34:34.839] getCompletionsAtPosition: isCompletionListBlocker: 0.025394999887794256
+Info 325  [17:34:34.852] getExportInfoMap: cache miss or empty; calculating new results
+Info 326  [17:34:34.908] getExportInfoMap: done in 66.09446400008164 ms
+Info 327  [17:34:34.953] collectAutoImports: resolved 0 module specifiers, plus 908 ambient and 351 from cache
+Info 328  [17:34:34.953] collectAutoImports: response is complete
+Info 329  [17:34:34.953] collectAutoImports: 34.1284539999906
+Info 330  [17:34:34.953] getCompletionData: Semantic work: 113.84176400001161
+Info 331  [17:34:34.970] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 17.114850000012666
+Info 332  [17:34:35.287] getCompletionData: Get current token: 0.017727999947965145
+Info 333  [17:34:35.287] getCompletionData: Is inside comment: 0.03714100015349686
+Info 334  [17:34:35.287] getCompletionData: Get previous token: 0.01729299989528954
+Info 335  [17:34:35.287] getCompletionsAtPosition: isCompletionListBlocker: 0.01696099992841482
+Info 336  [17:34:35.290] getCompletionData: Semantic work: 2.878341999836266
+Info 337  [17:34:36.264] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 338  [17:34:36.308] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 13 structureChanged: false structureIsReused:: Completely Elapsed: 44.257352999877185ms
+Info 339  [17:34:36.308] Different program with same set of files
+Info 340  [17:34:36.407] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 341  [17:34:36.443] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 14 structureChanged: false structureIsReused:: Completely Elapsed: 35.849504000041634ms
+Info 342  [17:34:36.443] Different program with same set of files
+Info 343  [17:34:36.739] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 344  [17:34:36.799] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 15 structureChanged: true structureIsReused:: SafeModules Elapsed: 59.71861399989575ms
+Info 345  [17:34:36.799] Different program with same set of files
+Info 346  [17:34:36.905] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 347  [17:34:36.957] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 16 structureChanged: true structureIsReused:: SafeModules Elapsed: 52.299785000039265ms
+Info 348  [17:34:36.957] Different program with same set of files
+Info 349  [17:34:46.623] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 350  [17:34:46.700] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 17 structureChanged: true structureIsReused:: SafeModules Elapsed: 76.75071900011972ms
+Info 351  [17:34:46.700] Different program with same set of files
+Info 352  [17:34:46.736] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 353  [17:34:46.801] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 18 structureChanged: true structureIsReused:: SafeModules Elapsed: 64.66508599999361ms
+Info 354  [17:34:46.801] Different program with same set of files
+Info 355  [17:34:47.384] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 356  [17:34:47.448] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 19 structureChanged: true structureIsReused:: SafeModules Elapsed: 64.15643800003454ms
+Info 357  [17:34:47.448] Different program with same set of files
+Info 358  [17:34:48.947] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 359  [17:34:49.017] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 20 structureChanged: true structureIsReused:: SafeModules Elapsed: 70.55657300003804ms
+Info 360  [17:34:49.017] Different program with same set of files
+Info 361  [17:34:49.018] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 362  [17:34:49.070] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 21 structureChanged: true structureIsReused:: SafeModules Elapsed: 51.39705500006676ms
+Info 363  [17:34:49.070] Different program with same set of files
+Info 364  [17:34:49.363] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 365  [17:34:49.471] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 22 structureChanged: true structureIsReused:: SafeModules Elapsed: 107.92246600007638ms
+Info 366  [17:34:49.471] Different program with same set of files
+Info 367  [17:35:35.929] Search path: /home/ringu/Projects/redditrem/src/components
+Info 368  [17:35:35.929] For info: /home/ringu/Projects/redditrem/src/components/SignIn.tsx :: Config file name: /home/ringu/Projects/redditrem/tsconfig.json
+Info 369  [17:35:44.060] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 370  [17:35:44.072] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 2 structureChanged: false structureIsReused:: Completely Elapsed: 12.027823000214994ms
+Info 371  [17:35:44.072] Different program with same set of files
+Info 372  [17:35:44.399] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 373  [17:35:44.412] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 3 structureChanged: false structureIsReused:: Completely Elapsed: 13.767770000034943ms
+Info 374  [17:35:44.412] Different program with same set of files
+Info 375  [17:35:44.413] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 376  [17:35:44.421] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 4 structureChanged: false structureIsReused:: Completely Elapsed: 8.004336000187322ms
+Info 377  [17:35:44.421] Different program with same set of files
+Info 378  [17:35:44.657] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 379  [17:35:44.701] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 23 structureChanged: false structureIsReused:: Completely Elapsed: 44.06393499998376ms
+Info 380  [17:35:44.701] Different program with same set of files
+Info 381  [17:35:44.900] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 382  [17:35:45.095] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 24 structureChanged: false structureIsReused:: Completely Elapsed: 195.13365799980238ms
+Info 383  [17:35:45.095] Different program with same set of files
+Info 384  [17:35:45.157] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 385  [17:35:45.163] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 5 structureChanged: false structureIsReused:: Completely Elapsed: 5.350499999942258ms
+Info 386  [17:35:45.163] Different program with same set of files
+Info 387  [17:35:45.549] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 388  [17:35:45.555] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 6 structureChanged: false structureIsReused:: Completely Elapsed: 6.386136000044644ms
+Info 389  [17:35:45.555] Different program with same set of files
+Info 390  [17:35:45.649] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 391  [17:35:45.687] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 25 structureChanged: false structureIsReused:: Completely Elapsed: 37.79988700011745ms
+Info 392  [17:35:45.687] Different program with same set of files
+Info 393  [17:35:48.312] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 394  [17:35:48.320] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 7 structureChanged: false structureIsReused:: Completely Elapsed: 8.09223399986513ms
+Info 395  [17:35:48.320] Different program with same set of files
+Info 396  [17:35:48.447] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 397  [17:35:48.478] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 26 structureChanged: false structureIsReused:: Completely Elapsed: 31.125045999884605ms
+Info 398  [17:35:48.478] Different program with same set of files
+Info 399  [17:35:49.333] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 400  [17:35:49.338] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 8 structureChanged: false structureIsReused:: Completely Elapsed: 4.857852000044659ms
+Info 401  [17:35:49.338] Different program with same set of files
+Info 402  [17:35:49.380] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 403  [17:35:49.385] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 9 structureChanged: false structureIsReused:: Completely Elapsed: 4.95602499996312ms
+Info 404  [17:35:49.385] Different program with same set of files
+Info 405  [17:35:49.679] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 406  [17:35:49.685] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 10 structureChanged: false structureIsReused:: Completely Elapsed: 6.155487000010908ms
+Info 407  [17:35:49.685] Different program with same set of files
+Info 408  [17:35:50.052] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 409  [17:35:50.058] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 11 structureChanged: false structureIsReused:: Completely Elapsed: 5.184393000090495ms
+Info 410  [17:35:50.058] Different program with same set of files
+Info 411  [17:35:50.168] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 412  [17:35:50.176] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 12 structureChanged: false structureIsReused:: Completely Elapsed: 8.662024000193924ms
+Info 413  [17:35:50.176] Different program with same set of files
+Info 414  [17:35:51.084] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 415  [17:35:51.088] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 13 structureChanged: false structureIsReused:: Completely Elapsed: 4.469801000086591ms
+Info 416  [17:35:51.088] Different program with same set of files
+Info 417  [17:35:51.191] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 418  [17:35:51.224] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 27 structureChanged: false structureIsReused:: Completely Elapsed: 33.691548000089824ms
+Info 419  [17:35:51.224] Different program with same set of files
+Info 420  [17:35:56.223] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 421  [17:35:56.229] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 14 structureChanged: false structureIsReused:: Completely Elapsed: 5.564929999876767ms
+Info 422  [17:35:56.229] Different program with same set of files
+Info 423  [17:35:56.305] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 424  [17:35:56.334] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 28 structureChanged: false structureIsReused:: Completely Elapsed: 28.87252699979581ms
+Info 425  [17:35:56.334] Different program with same set of files
+Info 426  [17:36:28.061] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 427  [17:36:28.066] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 15 structureChanged: false structureIsReused:: Completely Elapsed: 5.350855000084266ms
+Info 428  [17:36:28.066] Different program with same set of files
+Info 429  [17:36:28.216] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 430  [17:36:28.221] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 16 structureChanged: false structureIsReused:: Completely Elapsed: 5.02789600007236ms
+Info 431  [17:36:28.221] Different program with same set of files
+Info 432  [17:36:28.476] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 433  [17:36:28.481] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 17 structureChanged: false structureIsReused:: Completely Elapsed: 5.49692100007087ms
+Info 434  [17:36:28.481] Different program with same set of files
+Info 435  [17:36:28.672] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 436  [17:36:28.702] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 29 structureChanged: false structureIsReused:: Completely Elapsed: 30.358383999904618ms
+Info 437  [17:36:28.702] Different program with same set of files
+Info 438  [17:36:29.117] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 439  [17:36:29.123] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 18 structureChanged: false structureIsReused:: Completely Elapsed: 5.921047999989241ms
+Info 440  [17:36:29.123] Different program with same set of files
+Info 441  [17:36:29.202] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 442  [17:36:29.245] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 30 structureChanged: false structureIsReused:: Completely Elapsed: 42.62400100007653ms
+Info 443  [17:36:29.245] Different program with same set of files
+Info 444  [17:36:30.391] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 445  [17:36:30.396] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 19 structureChanged: false structureIsReused:: Completely Elapsed: 4.589860999956727ms
+Info 446  [17:36:30.396] Different program with same set of files
+Info 447  [17:36:30.462] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 448  [17:36:30.490] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 31 structureChanged: false structureIsReused:: Completely Elapsed: 28.1053930001799ms
+Info 449  [17:36:30.490] Different program with same set of files
+Info 450  [17:36:33.793] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 451  [17:36:33.799] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 20 structureChanged: false structureIsReused:: Completely Elapsed: 5.445452000014484ms
+Info 452  [17:36:33.799] Different program with same set of files
+Info 453  [17:36:33.873] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 454  [17:36:33.902] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 32 structureChanged: false structureIsReused:: Completely Elapsed: 29.120605000061914ms
+Info 455  [17:36:33.902] Different program with same set of files
+Info 456  [17:36:40.859] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 457  [17:36:40.868] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 21 structureChanged: false structureIsReused:: Completely Elapsed: 8.63639900018461ms
+Info 458  [17:36:40.868] Different program with same set of files
+Info 459  [17:36:40.978] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 460  [17:36:40.984] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 22 structureChanged: false structureIsReused:: Completely Elapsed: 5.526742999907583ms
+Info 461  [17:36:40.984] Different program with same set of files
+Info 462  [17:36:41.508] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 463  [17:36:41.520] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 23 structureChanged: false structureIsReused:: Completely Elapsed: 11.636760000139475ms
+Info 464  [17:36:41.520] Different program with same set of files
+Info 465  [17:36:41.586] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 466  [17:36:41.591] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 24 structureChanged: false structureIsReused:: Completely Elapsed: 4.248395999893546ms
+Info 467  [17:36:41.591] Different program with same set of files
+Info 468  [17:36:41.879] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 469  [17:36:41.885] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 25 structureChanged: false structureIsReused:: Completely Elapsed: 5.812954999972135ms
+Info 470  [17:36:41.885] Different program with same set of files
+Info 471  [17:36:41.950] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 472  [17:36:41.954] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 26 structureChanged: false structureIsReused:: Completely Elapsed: 4.258116000099108ms
+Info 473  [17:36:41.954] Different program with same set of files
+Info 474  [17:36:42.714] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 475  [17:36:42.719] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 27 structureChanged: false structureIsReused:: Completely Elapsed: 4.355212000198662ms
+Info 476  [17:36:42.719] Different program with same set of files
+Info 477  [17:36:42.791] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 478  [17:36:42.820] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 33 structureChanged: false structureIsReused:: Completely Elapsed: 29.054858999792486ms
+Info 479  [17:36:42.820] Different program with same set of files
+Info 480  [17:36:44.921] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 481  [17:36:44.927] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 28 structureChanged: false structureIsReused:: Completely Elapsed: 5.189172000158578ms
+Info 482  [17:36:44.927] Different program with same set of files
+Info 483  [17:36:44.998] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 484  [17:36:45.027] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 34 structureChanged: false structureIsReused:: Completely Elapsed: 28.72435999987647ms
+Info 485  [17:36:45.027] Different program with same set of files
+Info 486  [17:36:51.405] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 487  [17:36:51.410] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 29 structureChanged: false structureIsReused:: Completely Elapsed: 4.728665000060573ms
+Info 488  [17:36:51.410] Different program with same set of files
+Info 489  [17:36:51.477] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 490  [17:36:51.481] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 30 structureChanged: false structureIsReused:: Completely Elapsed: 4.626054000109434ms
+Info 491  [17:36:51.482] Different program with same set of files
+Info 492  [17:36:52.020] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 493  [17:36:52.026] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 31 structureChanged: false structureIsReused:: Completely Elapsed: 5.72210399992764ms
+Info 494  [17:36:52.026] Different program with same set of files
+Info 495  [17:36:52.101] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 496  [17:36:52.129] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 35 structureChanged: false structureIsReused:: Completely Elapsed: 28.56413699989207ms
+Info 497  [17:36:52.129] Different program with same set of files
+Info 498  [17:36:54.460] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 499  [17:36:54.465] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 32 structureChanged: false structureIsReused:: Completely Elapsed: 4.872685000067577ms
+Info 500  [17:36:54.465] Different program with same set of files
+Info 501  [17:36:54.616] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 502  [17:36:54.621] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 33 structureChanged: false structureIsReused:: Completely Elapsed: 4.997063999995589ms
+Info 503  [17:36:54.621] Different program with same set of files
+Info 504  [17:36:55.005] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 505  [17:36:55.010] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 34 structureChanged: false structureIsReused:: Completely Elapsed: 4.5559189999476075ms
+Info 506  [17:36:55.010] Different program with same set of files
+Info 507  [17:36:55.075] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 508  [17:36:55.083] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 35 structureChanged: false structureIsReused:: Completely Elapsed: 7.715127999894321ms
+Info 509  [17:36:55.083] Different program with same set of files
+Info 510  [17:36:55.540] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 511  [17:36:55.546] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 36 structureChanged: false structureIsReused:: Completely Elapsed: 5.868098000064492ms
+Info 512  [17:36:55.546] Different program with same set of files
+Info 513  [17:36:55.546] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 514  [17:36:55.552] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 37 structureChanged: false structureIsReused:: Completely Elapsed: 5.9049219998996705ms
+Info 515  [17:36:55.552] Different program with same set of files
+Info 516  [17:36:55.745] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 517  [17:36:55.784] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 36 structureChanged: false structureIsReused:: Completely Elapsed: 39.48630400002003ms
+Info 518  [17:36:55.784] Different program with same set of files
+Info 519  [17:36:58.279] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 520  [17:36:58.284] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 38 structureChanged: false structureIsReused:: Completely Elapsed: 5.710986000020057ms
+Info 521  [17:36:58.285] Different program with same set of files
+Info 522  [17:36:58.526] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 523  [17:36:58.531] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 39 structureChanged: false structureIsReused:: Completely Elapsed: 5.572191000217572ms
+Info 524  [17:36:58.531] Different program with same set of files
+Info 525  [17:36:59.974] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 526  [17:36:59.979] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 40 structureChanged: false structureIsReused:: Completely Elapsed: 4.851936000166461ms
+Info 527  [17:36:59.979] Different program with same set of files
+Info 528  [17:37:00.069] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 529  [17:37:00.100] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 37 structureChanged: false structureIsReused:: Completely Elapsed: 30.26639600005001ms
+Info 530  [17:37:00.100] Different program with same set of files
+Info 531  [17:37:03.379] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 532  [17:37:03.384] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 41 structureChanged: false structureIsReused:: Completely Elapsed: 4.812942000105977ms
+Info 533  [17:37:03.384] Different program with same set of files
+Info 534  [17:37:03.473] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 535  [17:37:03.500] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 38 structureChanged: false structureIsReused:: Completely Elapsed: 26.632301999954507ms
+Info 536  [17:37:03.500] Different program with same set of files
+Info 537  [17:37:03.640] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 538  [17:37:03.648] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 42 structureChanged: false structureIsReused:: Completely Elapsed: 8.345950999995694ms
+Info 539  [17:37:03.648] Different program with same set of files
+Info 540  [17:37:04.285] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 541  [17:37:04.291] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 43 structureChanged: false structureIsReused:: Completely Elapsed: 6.355677000014111ms
+Info 542  [17:37:04.292] Different program with same set of files
+Info 543  [17:37:04.364] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 544  [17:37:04.393] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 39 structureChanged: false structureIsReused:: Completely Elapsed: 28.848970000166446ms
+Info 545  [17:37:04.393] Different program with same set of files
+Info 546  [17:37:19.542] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 547  [17:37:19.556] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 44 structureChanged: false structureIsReused:: Completely Elapsed: 14.336093000136316ms
+Info 548  [17:37:19.556] Different program with same set of files
+Info 549  [17:37:19.907] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 550  [17:37:20.009] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 45 structureChanged: false structureIsReused:: Completely Elapsed: 101.62903099996038ms
+Info 551  [17:37:20.009] Different program with same set of files
+Info 552  [17:37:20.138] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 553  [17:37:20.143] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 46 structureChanged: false structureIsReused:: Completely Elapsed: 4.580570999998599ms
+Info 554  [17:37:20.143] Different program with same set of files
+Info 555  [17:37:20.277] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 556  [17:37:20.319] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 40 structureChanged: false structureIsReused:: Completely Elapsed: 42.07599400007166ms
+Info 557  [17:37:20.319] Different program with same set of files
+Info 558  [17:37:20.833] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 559  [17:37:20.840] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 47 structureChanged: false structureIsReused:: Completely Elapsed: 6.917720000026748ms
+Info 560  [17:37:20.840] Different program with same set of files
+Info 561  [17:37:20.917] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 562  [17:37:20.928] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 48 structureChanged: false structureIsReused:: Completely Elapsed: 10.408608000027016ms
+Info 563  [17:37:20.928] Different program with same set of files
+Info 564  [17:37:22.016] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 565  [17:37:22.024] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 49 structureChanged: false structureIsReused:: Completely Elapsed: 7.690605999901891ms
+Info 566  [17:37:22.024] Different program with same set of files
+Info 567  [17:37:22.096] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 568  [17:37:22.130] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 41 structureChanged: false structureIsReused:: Completely Elapsed: 33.99331199983135ms
+Info 569  [17:37:22.130] Different program with same set of files
+Info 570  [17:37:23.720] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 571  [17:37:23.731] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 50 structureChanged: false structureIsReused:: Completely Elapsed: 10.450603999895975ms
+Info 572  [17:37:23.731] Different program with same set of files
+Info 573  [17:37:23.802] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 574  [17:37:23.835] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 42 structureChanged: false structureIsReused:: Completely Elapsed: 33.2805159999989ms
+Info 575  [17:37:23.835] Different program with same set of files
+Info 576  [17:37:34.637] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 577  [17:37:34.644] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 51 structureChanged: false structureIsReused:: Completely Elapsed: 6.798816000111401ms
+Info 578  [17:37:34.644] Different program with same set of files
+Info 579  [17:37:34.742] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 580  [17:37:34.769] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 43 structureChanged: false structureIsReused:: Completely Elapsed: 26.643844000063837ms
+Info 581  [17:37:34.769] Different program with same set of files
+Info 582  [17:37:45.581] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 583  [17:37:45.591] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 52 structureChanged: false structureIsReused:: Completely Elapsed: 10.047838999889791ms
+Info 584  [17:37:45.591] Different program with same set of files
+Info 585  [17:37:45.689] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 586  [17:37:45.717] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 44 structureChanged: false structureIsReused:: Completely Elapsed: 27.730195000069216ms
+Info 587  [17:37:45.717] Different program with same set of files
+Info 588  [17:37:57.854] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 589  [17:37:57.859] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 53 structureChanged: false structureIsReused:: Completely Elapsed: 4.5618849999736995ms
+Info 590  [17:37:57.859] Different program with same set of files
+Info 591  [17:37:58.108] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 592  [17:37:58.136] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 45 structureChanged: false structureIsReused:: Completely Elapsed: 27.232522000093013ms
+Info 593  [17:37:58.136] Different program with same set of files
+Info 594  [17:37:58.195] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 595  [17:37:58.200] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 54 structureChanged: false structureIsReused:: Completely Elapsed: 4.911136999959126ms
+Info 596  [17:37:58.200] Different program with same set of files
+Info 597  [17:37:58.637] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 598  [17:37:58.645] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 55 structureChanged: false structureIsReused:: Completely Elapsed: 8.377710999920964ms
+Info 599  [17:37:58.645] Different program with same set of files
+Info 600  [17:37:58.646] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 601  [17:37:58.651] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 56 structureChanged: false structureIsReused:: Completely Elapsed: 5.186028999974951ms
+Info 602  [17:37:58.651] Different program with same set of files
+Info 603  [17:37:58.959] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 604  [17:37:58.965] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 57 structureChanged: false structureIsReused:: Completely Elapsed: 5.749629999976605ms
+Info 605  [17:37:58.965] Different program with same set of files
+Info 606  [17:37:59.031] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 607  [17:37:59.059] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 46 structureChanged: false structureIsReused:: Completely Elapsed: 28.02380200009793ms
+Info 608  [17:37:59.059] Different program with same set of files
+Info 609  [17:37:59.235] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 610  [17:37:59.432] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 47 structureChanged: false structureIsReused:: Completely Elapsed: 196.02616299991496ms
+Info 611  [17:37:59.432] Different program with same set of files
+Info 612  [17:37:59.476] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 613  [17:37:59.481] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 58 structureChanged: false structureIsReused:: Completely Elapsed: 5.047556000063196ms
+Info 614  [17:37:59.481] Different program with same set of files
+Info 615  [17:37:59.482] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 616  [17:37:59.486] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 59 structureChanged: false structureIsReused:: Completely Elapsed: 4.262788000050932ms
+Info 617  [17:37:59.486] Different program with same set of files
+Info 618  [17:37:59.978] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 619  [17:37:59.987] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 60 structureChanged: false structureIsReused:: Completely Elapsed: 8.78254000004381ms
+Info 620  [17:37:59.987] Different program with same set of files
+Info 621  [17:37:59.987] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 622  [17:38:00.001] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 61 structureChanged: false structureIsReused:: Completely Elapsed: 13.458721000002697ms
+Info 623  [17:38:00.001] Different program with same set of files
+Info 624  [17:38:00.280] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 625  [17:38:00.285] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 62 structureChanged: false structureIsReused:: Completely Elapsed: 5.09382599988021ms
+Info 626  [17:38:00.285] Different program with same set of files
+Info 627  [17:38:00.368] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 628  [17:38:00.400] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 48 structureChanged: false structureIsReused:: Completely Elapsed: 32.033144999993965ms
+Info 629  [17:38:00.400] Different program with same set of files
+Info 630  [17:38:02.779] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 631  [17:38:02.786] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 63 structureChanged: false structureIsReused:: Completely Elapsed: 7.1186699999962ms
+Info 632  [17:38:02.786] Different program with same set of files
+Info 633  [17:38:03.010] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 634  [17:38:03.015] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 64 structureChanged: false structureIsReused:: Completely Elapsed: 4.538919000187889ms
+Info 635  [17:38:03.015] Different program with same set of files
+Info 636  [17:38:03.162] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 637  [17:38:03.190] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 49 structureChanged: false structureIsReused:: Completely Elapsed: 28.425971999997273ms
+Info 638  [17:38:03.190] Different program with same set of files
+Info 639  [17:38:03.337] Starting updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json
+Info 640  [17:38:03.342] Finishing updateGraphWorker: Project: /home/ringu/Projects/redditrem/tsconfig.json Version: 65 structureChanged: false structureIsReused:: Completely Elapsed: 4.574109999928623ms
+Info 641  [17:38:03.342] Different program with same set of files
+Info 642  [17:38:03.610] Starting updateGraphWorker: Project: /dev/null/inferredProject1*
+Info 643  [17:38:03.640] Finishing updateGraphWorker: Project: /dev/null/inferredProject1* Version: 50 structureChanged: false structureIsReused:: Completely Elapsed: 29.777504000114277ms
+Info 644  [17:38:03.640] Different program with same set of files

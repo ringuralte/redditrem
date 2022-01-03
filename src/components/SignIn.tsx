@@ -1,12 +1,13 @@
 import React from "react";
 import { uuid } from "uuidv4";
 import { isMobile } from "react-device-detect";
-import { connect } from "react-redux";
-
-const SignIn = ({ errorMessage }) => {
+/* import { connect } from "react-redux";
+ *  */
+export const SignIn = ({ errorMessage }: any) => {
   const setUuid = () => {
     if (isMobile) {
-      const state = process.env.REACT_APP_MOBILE_STATE;
+      /* const state = process.env.REACT_APP_MOBILE_STATE; */
+      const state = "somestring";
       localStorage.setItem("state", state);
       window.location.href = `https://www.reddit.com/api/v1/authorize.compact?client_id=${
         process.env.REACT_APP_CLIENT_ID
@@ -34,7 +35,7 @@ const SignIn = ({ errorMessage }) => {
   };
 
   return (
-    <div className="grid md:grid-cols-2 bg-gray-100 min-h-screen">
+    <div className="flex flex-col md:justify-center justify-around bg-gray-100 min-h-screen">
       <div className="error-message">
         <span
           className={
@@ -45,15 +46,17 @@ const SignIn = ({ errorMessage }) => {
         </span>
       </div>
       <div className="flex items-center justify-center md:mb-32">
-        <div className="pt-32 md:pt-0 ">
+        <div className="">
           <h1 className="text-4xl md:text-6xl font-bold text-orange-600">
             RedditRem
           </h1>
-          <span className="block text-gray-800">View your saved content.</span>
+          <span className="block text-gray-800 text-center">
+            View your saved content.
+          </span>
         </div>
       </div>
       <div className="flex items-center flex-col justify-center md:mb-32">
-        <div className="pb-32 md:pb-0 flex flex-col items-left">
+        <div className="md:pb-0 flex flex-col items-left">
           <button
             className="text-xl md:text-2xl tracking-wider border-2 rounded-md border-orange-600 hover:bg-orange-600 hover:text-white font-bold text-orange-600 py-4 px-6 md:py-6 md:px-8"
             onClick={setUuid}
@@ -69,10 +72,10 @@ const SignIn = ({ errorMessage }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    errorMessage: state.error.errorMessage,
-  };
-};
-
-export default connect(mapStateToProps)(SignIn);
+/* const mapStateToProps = (state: any) => {
+ *   return {
+ *     errorMessage: state.error.errorMessage,
+ *   };
+ * };
+ *
+ * export default connect(mapStateToProps)(SignIn); */

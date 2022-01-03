@@ -6,7 +6,7 @@ import {
 } from "./userTypes";
 
 export const fetchUser = () => {
-  return (dispatch) => {
+  return (dispatch: any) => {
     dispatch(fetchUserRequest());
     return axios
       .get(`https://oauth.reddit.com/api/v1/me`, {
@@ -27,14 +27,14 @@ export const fetchUserRequest = () => {
   };
 };
 
-export const fetchUserSuccess = (user) => {
+export const fetchUserSuccess = (user: string) => {
   return {
     type: FETCH_USER_SUCCESS,
     payload: user,
   };
 };
 
-export const fetchUserFailure = (error) => {
+export const fetchUserFailure = (error: string) => {
   return {
     type: FETCH_USER_FAILURE,
     payload: error,

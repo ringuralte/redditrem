@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './tailwind.generated.css';
+/* import './tailwind.generated.css'; */
+import "./index.css"
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
